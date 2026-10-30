@@ -1,0 +1,163 @@
+{
+  "enabled": true,
+  "purpose": "Engineering surface appearance defaults, not measured real-factory materials; no texture assets downloaded",
+  "profiles": {
+    "concrete": {
+      "color": [
+        0.32,
+        0.36,
+        0.39,
+        1
+      ],
+      "roughness": 0.92,
+      "metalness": 0
+    },
+    "wall_paint": {
+      "color": [
+        0.84,
+        0.87,
+        0.89,
+        1
+      ],
+      "roughness": 0.9,
+      "metalness": 0
+    },
+    "painted_steel": {
+      "color": [
+        0.075,
+        0.15,
+        0.25,
+        1
+      ],
+      "roughness": 0.78,
+      "metalness": 0.05
+    },
+    "machine_paint": {
+      "color": [
+        0.1,
+        0.38,
+        0.4,
+        1
+      ],
+      "roughness": 0.78,
+      "metalness": 0.05
+    },
+    "wood": {
+      "color": [
+        0.49,
+        0.34,
+        0.19,
+        1
+      ],
+      "roughness": 0.82,
+      "metalness": 0
+    },
+    "road_marking": {
+      "color": [
+        0.84,
+        0.63,
+        0.08,
+        1
+      ],
+      "roughness": 0.7,
+      "metalness": 0
+    },
+    "glass": {
+      "color": [
+        0.77,
+        0.85,
+        0.87,
+        1
+      ],
+      "roughness": 0.12,
+      "metalness": 0,
+      "transparency": 0.72
+    },
+    "window_frame": {
+      "color": [
+        0.31,
+        0.32,
+        0.32,
+        1
+      ],
+      "roughness": 0.4,
+      "metalness": 0.65
+    },
+    "vehicle_body": {
+      "color": [
+        0.64,
+        0.66,
+        0.66,
+        1
+      ],
+      "roughness": 0.43,
+      "metalness": 0.15
+    },
+    "vehicle_cab": {
+      "color": [
+        0.16,
+        0.26,
+        0.38,
+        1
+      ],
+      "roughness": 0.43,
+      "metalness": 0.15
+    }
+  },
+  "indoor_fill_lights": {
+    "enabled": false,
+    "positions": [
+      [
+        -7,
+        -7,
+        4.6
+      ],
+      [
+        7,
+        -7,
+        4.6
+      ],
+      [
+        -7,
+        7,
+        4.6
+      ],
+      [
+        7,
+        7,
+        4.6
+      ]
+    ],
+    "diffuse": [
+      0.42,
+      0.41,
+      0.39,
+      1
+    ],
+    "range_m": 22,
+    "disabled_reason": "Controlled same-view comparison: rectangular ground brightness tiles persist with sun shadows off and disappear when these four local fill lights are removed. Keep sun shadows and ambient light."
+  },
+  "sensor_intrinsics_unchanged": true,
+  "collision_geometry_unchanged": false,
+  "glass_note": "Approximate transparent rasterized appearance; not physically accurate glass refraction or LiDAR return simulation",
+  "camera_quality_note": "Nominal-FOV pinhole approximation; no measured camera response/distortion. Use diffuse factory appearance; no photo-realism claim.",
+  "spawn_pose_world_xyz_rpy": [
+    0,
+    3.5,
+    0.02,
+    0,
+    0,
+    1.5707963267948966
+  ],
+  "appearance_note": "Diffuse contrasting industrial palette; engineering approximations, not calibrated photorealism. No extra fill lights or downloaded textures.",
+  "roof": {
+    "bottom_m": 4.8,
+    "top_m": 5.0,
+    "source": "procedural",
+    "note": "Scene ambient raised to 0.65 to compensate for roof shading; no point fill lights, avoiding previously observed ground light tiles."
+  },
+  "workers": {
+    "count": 10,
+    "appearance": "procedural static figures with workwear and helmets; not photorealistic"
+  }
+}

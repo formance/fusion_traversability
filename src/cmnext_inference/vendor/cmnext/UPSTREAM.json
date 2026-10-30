@@ -1,0 +1,59 @@
+{
+  "repository": "InSAI-Lab/DELIVER",
+  "revision": "b3a76c33a7b22098b7285d845f22c910abc5cb16",
+  "files": [
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/InSAI-Lab/DELIVER/b3a76c33a7b22098b7285d845f22c910abc5cb16/LICENSE",
+      "upstream_sha256": "70d5b2cc559038be87acecfb7829d344d3baa9528a47afda6d00043039f4877e"
+    },
+    {
+      "path": "semseg/models/cmnext.py",
+      "url": "https://raw.githubusercontent.com/InSAI-Lab/DELIVER/b3a76c33a7b22098b7285d845f22c910abc5cb16/semseg/models/cmnext.py",
+      "upstream_sha256": "7feb923e1671f196c287eec118dce23dec9cb29053c7bb23c2a58f399829a0cb"
+    },
+    {
+      "path": "semseg/models/base.py",
+      "url": "https://raw.githubusercontent.com/InSAI-Lab/DELIVER/b3a76c33a7b22098b7285d845f22c910abc5cb16/semseg/models/base.py",
+      "upstream_sha256": "0164413a029d497c01b5b1bce83506db7da7496ca1e7da660715cf260508fcb2"
+    },
+    {
+      "path": "semseg/models/backbones/cmnext.py",
+      "url": "https://raw.githubusercontent.com/InSAI-Lab/DELIVER/b3a76c33a7b22098b7285d845f22c910abc5cb16/semseg/models/backbones/cmnext.py",
+      "upstream_sha256": "077ead837b54c262773674e7dbb8d4248ecf83f6143bd6723acd2974fe3af153"
+    },
+    {
+      "path": "semseg/models/heads/segformer.py",
+      "url": "https://raw.githubusercontent.com/InSAI-Lab/DELIVER/b3a76c33a7b22098b7285d845f22c910abc5cb16/semseg/models/heads/segformer.py",
+      "upstream_sha256": "e881d1f8eb621a04949071186ff0f4793b7f77736cb735b901413f82c1a61a6c"
+    },
+    {
+      "path": "semseg/models/modules/ffm.py",
+      "url": "https://raw.githubusercontent.com/InSAI-Lab/DELIVER/b3a76c33a7b22098b7285d845f22c910abc5cb16/semseg/models/modules/ffm.py",
+      "upstream_sha256": "ada5e36e14d83c35d9230618c4eb84352a76ec2275a086a624b280e7638d8473"
+    },
+    {
+      "path": "semseg/models/modules/mspa.py",
+      "url": "https://raw.githubusercontent.com/InSAI-Lab/DELIVER/b3a76c33a7b22098b7285d845f22c910abc5cb16/semseg/models/modules/mspa.py",
+      "upstream_sha256": "6bfe7febebc03af0f768acfc481bcb7ed9f9f99e6406910d6142fceac2e251c0"
+    },
+    {
+      "path": "semseg/models/layers/common.py",
+      "url": "https://raw.githubusercontent.com/InSAI-Lab/DELIVER/b3a76c33a7b22098b7285d845f22c910abc5cb16/semseg/models/layers/common.py",
+      "upstream_sha256": "0e873b425994daa9184c7baf966415a4759cab53569cd0d0cc76a078f7a08498"
+    },
+    {
+      "path": "semseg/models/layers/initialize.py",
+      "url": "https://raw.githubusercontent.com/InSAI-Lab/DELIVER/b3a76c33a7b22098b7285d845f22c910abc5cb16/semseg/models/layers/initialize.py",
+      "upstream_sha256": "4d75b7474428e29cb358aa319729ca0c8369aeb62a24f3337f31645743135185"
+    }
+  ],
+  "adaptations": [
+    "Inference-only package imports",
+    "Remove profiling and demo imports",
+    "Use upstream parameter-free DropPath",
+    "Use torch trunc_normal_",
+    "Replace mmcv BN factory with equivalent torch BatchNorm2d defaults"
+  ],
+  "architecture_or_weight_key_changes": false
+}

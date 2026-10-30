@@ -1,0 +1,45 @@
+name: fusion-traversability-cmnext
+services:
+  inference:
+    image: fusion_traversability_cmnext:latest
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.cmnext
+      network: none
+    init: true
+    shm_size: 256mb
+    mem_limit: 4g
+    mem_reservation: 2g
+    memswap_limit: 4g
+    cpus: 4.0
+    ports:
+      - "127.0.0.1:${CMNEXT_PORT:-8765}:8765"
+    volumes:
+      - type: bind
+        source: ../src/cmnext_inference
+        target: /app/src/cmnext_inference
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ../models/cmnext
+        target: /app/models/cmnext
+        read_only: true
+        bind:
+          create_host_path: false
+    environment:
+      NVIDIA_DRIVER_CAPABILITIES: compute,utility
+    deploy:
+      resources:
+        reservations:
+          memory: 2g
+          devices:
+            - driver: nvidia
+              device_ids: ["${GPU_DEVICE_ID:-0}"]
+              capabilities: [gpu]
+    command: ["python3", "-m", "cmnext_inference.runner.server", "--short-side", "${CMNEXT_SHORT_SIDE:-376}"]
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

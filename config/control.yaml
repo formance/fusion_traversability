@@ -1,0 +1,12 @@
+# W/X: move forward/backward by distance_step_m.
+# A/D: rotate left/right in place by turn_step_deg.
+# Reloaded before each accepted step; only one step runs at a time.
+distance_step_m: 0.20
+turn_step_deg: 15.0
+linear_speed_mps: 1.00
+angular_speed_radps: 0.20
+distance_tolerance_m: 0.005
+angle_tolerance_deg: 0.8
+odom_timeout_s: 1.0
+step_timeout_s: 30.0
+settle_time_s: 0.30

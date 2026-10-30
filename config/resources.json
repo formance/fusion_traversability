@@ -1,0 +1,34 @@
+{
+  "sample_interval_s": 2.0,
+  "host_stale_stop_s": 20.0,
+  "limits": {
+    "host_available_gib": {
+      "warn_below": 6.0,
+      "stop_below": 4.0,
+      "duration_s": 4.0
+    },
+    "wsl_available_gib": {
+      "warn_below": 1.5,
+      "stop_below": 0.75,
+      "duration_s": 6.0
+    },
+    "swap_used_gib": {
+      "warn_above": 0.25,
+      "stop_above": 0.5,
+      "duration_s": 10.0,
+      "require_below": {
+        "wsl_available_gib": 1.5
+      }
+    },
+    "gpu_free_gib": {
+      "warn_below": 2.0,
+      "stop_below": 1.0,
+      "duration_s": 6.0
+    },
+    "host_cpu_percent": {
+      "warn_above": 90.0,
+      "stop_above": 95.0,
+      "duration_s": 20.0
+    }
+  }
+}

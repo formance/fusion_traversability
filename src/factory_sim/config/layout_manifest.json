@@ -1,0 +1,937 @@
+{
+  "schema": "factory_roof_workers_v1",
+  "world_bounds_xy_m": [
+    -15,
+    15,
+    -15,
+    15
+  ],
+  "max_object_height_m": 5.0,
+  "robot_start": [
+    0,
+    3.5,
+    0.02,
+    0,
+    0,
+    1.5707963267948966
+  ],
+  "gt_label_convention": "Gazebo semantic ID = target 11-class ID + 1; 0 is unlabeled; robot remains unlabeled",
+  "gate": {
+    "x_m": 4.5,
+    "nominal_free_y_m": [
+      5.5,
+      7.5
+    ],
+    "clear_width_m": 2.0
+  },
+  "shelf_gap_m": 2.15,
+  "planned_route_centrelines": [
+    {
+      "name": "shelf_lower",
+      "start": [
+        -10.4,
+        6.525
+      ],
+      "end": [
+        -1.45,
+        6.525
+      ],
+      "min_obstacle_distance_m": 1.0749999999999993,
+      "nearest_object": "warehouse_rack_2"
+    },
+    {
+      "name": "shelf_upper",
+      "start": [
+        -10.4,
+        9.725
+      ],
+      "end": [
+        -1.45,
+        9.725
+      ],
+      "min_obstacle_distance_m": 1.0749999999999993,
+      "nearest_object": "warehouse_rack_2"
+    },
+    {
+      "name": "production_entry",
+      "start": [
+        -1.45,
+        6.5
+      ],
+      "end": [
+        10.05,
+        6.5
+      ],
+      "min_obstacle_distance_m": 1.0,
+      "nearest_object": "production_post_gate_lower"
+    },
+    {
+      "name": "production_between_machines",
+      "start": [
+        10.05,
+        6.5
+      ],
+      "end": [
+        10.05,
+        11.9
+      ],
+      "min_obstacle_distance_m": 1.0250000000000004,
+      "nearest_object": "production_fence_north"
+    },
+    {
+      "name": "main_forklift_left",
+      "start": [
+        -1.45,
+        5.6
+      ],
+      "end": [
+        -1.45,
+        11.9
+      ],
+      "min_obstacle_distance_m": 2.35,
+      "nearest_object": "inspection_forklift"
+    }
+  ],
+  "objects": [
+    {
+      "name": "wall_south_left",
+      "bounds_xy": [
+        -15.0,
+        -3.0,
+        15.0,
+        15.2
+      ],
+      "height_m": 5.0,
+      "semantic_target_id": 2,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "wall_south_right",
+      "bounds_xy": [
+        3.0,
+        15.0,
+        15.0,
+        15.2
+      ],
+      "height_m": 5.0,
+      "semantic_target_id": 2,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "wall_north",
+      "bounds_xy": [
+        -15.2,
+        15.2,
+        -15.2,
+        -15.0
+      ],
+      "height_m": 5.0,
+      "semantic_target_id": 2,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "wall_east",
+      "bounds_xy": [
+        15.0,
+        15.2,
+        -15.2,
+        15.2
+      ],
+      "height_m": 5.0,
+      "semantic_target_id": 2,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "wall_west",
+      "bounds_xy": [
+        -15.2,
+        -15.0,
+        -15.2,
+        15.2
+      ],
+      "height_m": 5.0,
+      "semantic_target_id": 2,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "warehouse_rack_1",
+      "bounds_xy": [
+        -12.9,
+        -7.9,
+        4.4,
+        5.45
+      ],
+      "height_m": 3.0,
+      "semantic_target_id": 3,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "warehouse_rack_2",
+      "bounds_xy": [
+        -12.9,
+        -7.9,
+        7.6,
+        8.65
+      ],
+      "height_m": 3.0,
+      "semantic_target_id": 3,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "warehouse_rack_3",
+      "bounds_xy": [
+        -12.9,
+        -7.9,
+        10.8,
+        11.85
+      ],
+      "height_m": 3.0,
+      "semantic_target_id": 3,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "pillar_1",
+      "bounds_xy": [
+        -4.5249999999999995,
+        -4.075,
+        0.275,
+        0.725
+      ],
+      "height_m": 4.8,
+      "semantic_target_id": 2,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "pillar_2",
+      "bounds_xy": [
+        -4.5249999999999995,
+        -4.075,
+        12.675,
+        13.125
+      ],
+      "height_m": 4.8,
+      "semantic_target_id": 2,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "pillar_3",
+      "bounds_xy": [
+        3.8749999999999996,
+        4.324999999999999,
+        0.275,
+        0.725
+      ],
+      "height_m": 4.8,
+      "semantic_target_id": 2,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "pillar_4",
+      "bounds_xy": [
+        3.8749999999999996,
+        4.324999999999999,
+        13.575000000000001,
+        14.025
+      ],
+      "height_m": 4.8,
+      "semantic_target_id": 2,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "production_fence_west_low",
+      "bounds_xy": [
+        4.425,
+        4.575,
+        2.04,
+        5.42
+      ],
+      "height_m": 2.0,
+      "semantic_target_id": 2,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "production_fence_west_high",
+      "bounds_xy": [
+        4.425,
+        4.575,
+        7.58,
+        12.959999999999999
+      ],
+      "height_m": 2.0,
+      "semantic_target_id": 2,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "production_fence_south",
+      "bounds_xy": [
+        4.54,
+        13.96,
+        1.925,
+        2.075
+      ],
+      "height_m": 2.0,
+      "semantic_target_id": 2,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "production_fence_north",
+      "bounds_xy": [
+        4.54,
+        13.96,
+        12.925,
+        13.075
+      ],
+      "height_m": 2.0,
+      "semantic_target_id": 2,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "production_fence_east",
+      "bounds_xy": [
+        13.925,
+        14.075,
+        2.04,
+        12.96
+      ],
+      "height_m": 2.0,
+      "semantic_target_id": 2,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "production_post_sw",
+      "bounds_xy": [
+        4.46,
+        4.54,
+        1.96,
+        2.04
+      ],
+      "height_m": 2.0,
+      "semantic_target_id": 2,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "production_post_nw",
+      "bounds_xy": [
+        4.46,
+        4.54,
+        12.96,
+        13.04
+      ],
+      "height_m": 2.0,
+      "semantic_target_id": 2,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "production_post_se",
+      "bounds_xy": [
+        13.96,
+        14.04,
+        1.96,
+        2.04
+      ],
+      "height_m": 2.0,
+      "semantic_target_id": 2,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "production_post_ne",
+      "bounds_xy": [
+        13.96,
+        14.04,
+        12.96,
+        13.04
+      ],
+      "height_m": 2.0,
+      "semantic_target_id": 2,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "production_post_gate_lower",
+      "bounds_xy": [
+        4.46,
+        4.54,
+        5.42,
+        5.5
+      ],
+      "height_m": 2.0,
+      "semantic_target_id": 2,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "production_post_gate_upper",
+      "bounds_xy": [
+        4.46,
+        4.54,
+        7.5,
+        7.58
+      ],
+      "height_m": 2.0,
+      "semantic_target_id": 2,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "production_cnc",
+      "bounds_xy": [
+        6.800000000000001,
+        8.92,
+        9.4475,
+        11.72
+      ],
+      "height_m": 2.57,
+      "semantic_target_id": 3,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "production_machine",
+      "bounds_xy": [
+        11.2,
+        13.2,
+        9.482,
+        11.0
+      ],
+      "height_m": 2.2,
+      "semantic_target_id": 3,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "production_control_cabinet",
+      "bounds_xy": [
+        6.8,
+        7.6000000000000005,
+        2.488,
+        3.1
+      ],
+      "height_m": 1.8,
+      "semantic_target_id": 3,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "production_conveyor",
+      "bounds_xy": [
+        10.5,
+        13.2,
+        2.5,
+        3.3
+      ],
+      "height_m": 1.0500000096461626,
+      "semantic_target_id": 3,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "inspection_forklift",
+      "bounds_xy": [
+        0.9000000000000001,
+        2.3,
+        9.0,
+        11.780000000000001
+      ],
+      "height_m": 2.12,
+      "semantic_target_id": 5,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "warehouse_handcart",
+      "bounds_xy": [
+        -6.425,
+        -5.275,
+        2.625,
+        3.385
+      ],
+      "height_m": 1.025,
+      "semantic_target_id": 5,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "office_workbench",
+      "bounds_xy": [
+        -12.3,
+        -10.8,
+        -11.9,
+        -11.1
+      ],
+      "height_m": 1.8,
+      "semantic_target_id": 3,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "office_cabinet",
+      "bounds_xy": [
+        -7.9,
+        -7.1,
+        -11.837,
+        -11.2
+      ],
+      "height_m": 1.7999999999999998,
+      "semantic_target_id": 3,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "utility_pump",
+      "bounds_xy": [
+        6.0,
+        7.199999999999999,
+        -11.899999998999998,
+        -10.999999999
+      ],
+      "height_m": 1.25,
+      "semantic_target_id": 3,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "utility_electrical_cabinet",
+      "bounds_xy": [
+        10.2,
+        11.0,
+        -11.837,
+        -11.2
+      ],
+      "height_m": 1.7999999999999998,
+      "semantic_target_id": 3,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "maintenance_bench",
+      "bounds_xy": [
+        -12.6,
+        -10.4,
+        -6.25,
+        -5.35
+      ],
+      "height_m": 1.8,
+      "semantic_target_id": 3,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "maintenance_parts_rack",
+      "bounds_xy": [
+        -8.0,
+        -6.4,
+        -2.05,
+        -1.35
+      ],
+      "height_m": 1.9,
+      "semantic_target_id": 3,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "packing_station",
+      "bounds_xy": [
+        -12.7,
+        -10.3,
+        -2.2,
+        -1.2
+      ],
+      "height_m": 1.8,
+      "semantic_target_id": 3,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "packing_pallets",
+      "bounds_xy": [
+        -4.6,
+        -2.6,
+        -6.3999999999999995,
+        -5.2
+      ],
+      "height_m": 1.2999999999999998,
+      "semantic_target_id": 3,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "packing_mobile_cart",
+      "bounds_xy": [
+        -7.875,
+        -6.725,
+        -6.18,
+        -5.42
+      ],
+      "height_m": 1.025,
+      "semantic_target_id": 5,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "maintenance_spares_cabinet",
+      "bounds_xy": [
+        -3.7,
+        -2.7,
+        -2.537,
+        -1.9000000000000001
+      ],
+      "height_m": 1.7999999999999998,
+      "semantic_target_id": 3,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "maintenance_tool_cabinet",
+      "bounds_xy": [
+        -4.0,
+        -3.0,
+        -11.837,
+        -11.2
+      ],
+      "height_m": 1.0,
+      "semantic_target_id": 3,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "utility_compressor",
+      "bounds_xy": [
+        3.5075,
+        4.4925,
+        -2.5195000000000003,
+        -1.8850000000000002
+      ],
+      "height_m": 1.42,
+      "semantic_target_id": 3,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "utility_air_receiver",
+      "bounds_xy": [
+        6.6,
+        7.4,
+        -2.6,
+        -1.8000000000000003
+      ],
+      "height_m": 2.15,
+      "semantic_target_id": 3,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "utility_service_panel",
+      "bounds_xy": [
+        10.3,
+        12.7,
+        -2.5620000000000003,
+        -1.875
+      ],
+      "height_m": 1.95,
+      "semantic_target_id": 3,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "utility_pump_skid",
+      "bounds_xy": [
+        3.7,
+        6.3,
+        -6.35,
+        -5.25
+      ],
+      "height_m": 1.25,
+      "semantic_target_id": 3,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "utility_filter_skid",
+      "bounds_xy": [
+        9.2,
+        10.8,
+        -6.225,
+        -5.375
+      ],
+      "height_m": 1.6700000107179587,
+      "semantic_target_id": 3,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "utility_spares",
+      "bounds_xy": [
+        2.5,
+        3.5,
+        -11.937,
+        -11.1
+      ],
+      "height_m": 1.6,
+      "semantic_target_id": 3,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "exit_roller_shutter",
+      "bounds_xy": [
+        -3,
+        3,
+        14.85,
+        15.25
+      ],
+      "height_m": 5.0,
+      "semantic_target_id": 2,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "worker_01",
+      "bounds_xy": [
+        -7.3,
+        -6.7,
+        4.2,
+        4.8
+      ],
+      "height_m": 1.7,
+      "semantic_target_id": 4,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "worker_02",
+      "bounds_xy": [
+        -6.3,
+        -5.7,
+        12.2,
+        12.8
+      ],
+      "height_m": 1.7,
+      "semantic_target_id": 4,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "worker_03",
+      "bounds_xy": [
+        5.7,
+        6.3,
+        8.2,
+        8.8
+      ],
+      "height_m": 1.7,
+      "semantic_target_id": 4,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "worker_04",
+      "bounds_xy": [
+        11.7,
+        12.3,
+        7.2,
+        7.8
+      ],
+      "height_m": 1.7,
+      "semantic_target_id": 4,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "worker_05",
+      "bounds_xy": [
+        -9.3,
+        -8.7,
+        -11.3,
+        -10.7
+      ],
+      "height_m": 1.7,
+      "semantic_target_id": 4,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "worker_06",
+      "bounds_xy": [
+        -6.3,
+        -5.7,
+        -11.3,
+        -10.7
+      ],
+      "height_m": 1.7,
+      "semantic_target_id": 4,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "worker_07",
+      "bounds_xy": [
+        -5.8,
+        -5.2,
+        -6.8,
+        -6.2
+      ],
+      "height_m": 1.7,
+      "semantic_target_id": 4,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "worker_08",
+      "bounds_xy": [
+        4.2,
+        4.8,
+        -11.3,
+        -10.7
+      ],
+      "height_m": 1.7,
+      "semantic_target_id": 4,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "worker_09",
+      "bounds_xy": [
+        7.7,
+        8.3,
+        -6.8,
+        -6.2
+      ],
+      "height_m": 1.7,
+      "semantic_target_id": 4,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "worker_10",
+      "bounds_xy": [
+        8.7,
+        9.3,
+        -12.3,
+        -11.7
+      ],
+      "height_m": 1.7,
+      "semantic_target_id": 4,
+      "collision_is_conservative_envelope": true
+    },
+    {
+      "name": "factory_roof",
+      "bounds_xy": [
+        -15,
+        15,
+        -15,
+        15
+      ],
+      "height_m": 5.0,
+      "semantic_target_id": 1,
+      "collision_is_conservative_envelope": true,
+      "overhead_only": true
+    }
+  ],
+  "appearance": {
+    "ground": "uniform grey",
+    "main_corridors": "green",
+    "exit": "closed static shutter"
+  },
+  "new_zones": {
+    "southwest": "assembly, maintenance and packing",
+    "southeast": "compressor, pumps, filters and service panels"
+  },
+  "roof": {
+    "name": "factory_roof",
+    "bounds_xy_m": [
+      -15,
+      15,
+      -15,
+      15
+    ],
+    "bottom_m": 4.8,
+    "top_m": 5.0,
+    "semantic_target_id": 1
+  },
+  "workers": [
+    {
+      "name": "worker_01",
+      "position_xy_m": [
+        -7,
+        4.5
+      ],
+      "yaw_rad": 0,
+      "primary_patrol_point": "02",
+      "height_m": 1.7,
+      "collision_radius_m": 0.3,
+      "model": "static procedural safety-clothing mannequin"
+    },
+    {
+      "name": "worker_02",
+      "position_xy_m": [
+        -6,
+        12.5
+      ],
+      "yaw_rad": 0,
+      "primary_patrol_point": "07",
+      "height_m": 1.7,
+      "collision_radius_m": 0.3,
+      "model": "static procedural safety-clothing mannequin"
+    },
+    {
+      "name": "worker_03",
+      "position_xy_m": [
+        6,
+        8.5
+      ],
+      "yaw_rad": 0,
+      "primary_patrol_point": "17",
+      "height_m": 1.7,
+      "collision_radius_m": 0.3,
+      "model": "static procedural safety-clothing mannequin"
+    },
+    {
+      "name": "worker_04",
+      "position_xy_m": [
+        12,
+        7.5
+      ],
+      "yaw_rad": 3.141592653589793,
+      "primary_patrol_point": "14",
+      "height_m": 1.7,
+      "collision_radius_m": 0.3,
+      "model": "static procedural safety-clothing mannequin"
+    },
+    {
+      "name": "worker_05",
+      "position_xy_m": [
+        -9,
+        -11
+      ],
+      "yaw_rad": 0,
+      "primary_patrol_point": "23",
+      "height_m": 1.7,
+      "collision_radius_m": 0.3,
+      "model": "static procedural safety-clothing mannequin"
+    },
+    {
+      "name": "worker_06",
+      "position_xy_m": [
+        -6,
+        -11
+      ],
+      "yaw_rad": 0,
+      "primary_patrol_point": "22",
+      "height_m": 1.7,
+      "collision_radius_m": 0.3,
+      "model": "static procedural safety-clothing mannequin"
+    },
+    {
+      "name": "worker_07",
+      "position_xy_m": [
+        -5.5,
+        -6.5
+      ],
+      "yaw_rad": 3.141592653589793,
+      "primary_patrol_point": "24",
+      "height_m": 1.7,
+      "collision_radius_m": 0.3,
+      "model": "static procedural safety-clothing mannequin"
+    },
+    {
+      "name": "worker_08",
+      "position_xy_m": [
+        4.5,
+        -11
+      ],
+      "yaw_rad": 3.141592653589793,
+      "primary_patrol_point": "26",
+      "height_m": 1.7,
+      "collision_radius_m": 0.3,
+      "model": "static procedural safety-clothing mannequin"
+    },
+    {
+      "name": "worker_09",
+      "position_xy_m": [
+        8,
+        -6.5
+      ],
+      "yaw_rad": 3.141592653589793,
+      "primary_patrol_point": "27",
+      "height_m": 1.7,
+      "collision_radius_m": 0.3,
+      "model": "static procedural safety-clothing mannequin"
+    },
+    {
+      "name": "worker_10",
+      "position_xy_m": [
+        9,
+        -12
+      ],
+      "yaw_rad": 1.5707963267948966,
+      "primary_patrol_point": "28",
+      "height_m": 1.7,
+      "collision_radius_m": 0.3,
+      "model": "static procedural safety-clothing mannequin"
+    }
+  ]
+}

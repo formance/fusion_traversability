@@ -1,0 +1,60 @@
+{
+  "transforms": [
+    {
+      "parent": "base_link",
+      "child": "camera_link",
+      "xyz": [
+        0.42,
+        0.0,
+        0.65
+      ],
+      "rpy": [
+        0.0,
+        0.2617993877991494,
+        0.0
+      ]
+    },
+    {
+      "parent": "camera_link",
+      "child": "camera_optical_frame",
+      "xyz": [
+        0,
+        0,
+        0
+      ],
+      "rpy": [
+        -1.5707963267948966,
+        0.0,
+        -1.5707963267948966
+      ]
+    },
+    {
+      "parent": "base_link",
+      "child": "lidar_link",
+      "xyz": [
+        0.42,
+        0.0,
+        0.4
+      ],
+      "rpy": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "parent": "base_link",
+      "child": "front_perception",
+      "xyz": [
+        0.42,
+        0.0,
+        0.0
+      ],
+      "rpy": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "repository": "https://github.com/FakeItUtillMakeIt/fusion_perception",
+  "commit": "42a05d44a7bc1bd137785b1f9e942c4a16347d15",
+  "world_source": "src/fp_factory_sim/worlds/factory1.world",
+  "robot_source": "src/fp_factory_sim/urdf/factory_robot1.xacro",
+  "reference_archive": "~/.local/share/fusion_traversability/references/factory_sim",
+  "adaptations": [
+    "Gazebo Harmonic systems and ROS 2 Jazzy bridges",
+    "Current sensor configuration and calibrated TF",
+    "Valid rear wheel cylinder inertia",
+    "Remove unused legacy macros and missing external school mesh",
+    "Explicit surface profiles and indoor fill lights"
+  ],
+  "scene": "factory_visual_refresh_v2",
+  "equipment_references": [
+    {
+      "url": "https://www.haascnc.com/machines/vertical-mills/vf-series/models/small/vf-2.html",
+      "usage": "Enclosed VMC design and existing approximate footprint; not an official manufacturer CAD model"
+    },
+    {
+      "url": "https://www.atlascopco.com/content/dam/atlas-copco/compressor-technique/industrial-air/documents/leaflets/compressors/ga7-75/GA7-75VSD%2B_antwerp_leaflet_EN_2935098144.pdf",
+      "usage": "Compressor full-feature envelope approximately W0.985 x D0.630 x H1.420 m"
+    },
+    {
+      "url": "https://www.boschrexroth.com/en/my/c/configurable-production-systems/",
+      "usage": "Workstations, parts supply and cart arrangement reference; simplified original geometry"
+    }
+  ],
+  "surface_palette_reference": "Engineering choice for contrast; not an industrial safety color standard"
+}

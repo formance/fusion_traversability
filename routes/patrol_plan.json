@@ -1,0 +1,550 @@
+{
+  "status": "planned_only",
+  "coordinate_system": "world +X is right, +Y is up; yaw CCW from +X",
+  "detection_reference": "front_perception 0.42 m ahead of base",
+  "detection_envelope_m": {
+    "forward": [
+      1,
+      8
+    ],
+    "lateral": [
+      -3,
+      3
+    ]
+  },
+  "visibility_scope": "ideal line-of-sight FOV only; excludes occlusion, density and object height",
+  "clearance_scope": "静态路线中心线到保守障碍物包围盒，0.01 m采样；不包括车身转弯扫掠",
+  "removed_original_points": [
+    "04",
+    "08",
+    "10",
+    "16"
+  ],
+  "points": [
+    {
+      "id": "01",
+      "x_m": 0,
+      "y_m": 3.5,
+      "yaw_deg": 90,
+      "note": "原点，朝向调整以观察下一点",
+      "previous_id": "01"
+    },
+    {
+      "id": "02",
+      "x_m": 0,
+      "y_m": 6.525,
+      "yaw_deg": 180,
+      "note": "原点",
+      "previous_id": "02"
+    },
+    {
+      "id": "03",
+      "x_m": -4.8,
+      "y_m": 6.525,
+      "yaw_deg": 180,
+      "note": "原点",
+      "previous_id": "03"
+    },
+    {
+      "id": "04",
+      "x_m": -10.4,
+      "y_m": 6.525,
+      "yaw_deg": 0,
+      "note": "原点，朝右",
+      "previous_id": "05"
+    },
+    {
+      "id": "05",
+      "x_m": -4.8,
+      "y_m": 6.525,
+      "yaw_deg": 0,
+      "note": "新增，复访原03位置朝右",
+      "previous_id": "03R"
+    },
+    {
+      "id": "06",
+      "x_m": -2.7,
+      "y_m": 7.7,
+      "yaw_deg": 58.31363231214338,
+      "note": "新增，过渡点",
+      "previous_id": "A"
+    },
+    {
+      "id": "07",
+      "x_m": -1.45,
+      "y_m": 9.725,
+      "yaw_deg": 180,
+      "note": "原点",
+      "previous_id": "06"
+    },
+    {
+      "id": "08",
+      "x_m": -4.8,
+      "y_m": 9.725,
+      "yaw_deg": 180,
+      "note": "原点",
+      "previous_id": "07"
+    },
+    {
+      "id": "09",
+      "x_m": -10.4,
+      "y_m": 9.725,
+      "yaw_deg": 0,
+      "note": "原点，朝右",
+      "previous_id": "09"
+    },
+    {
+      "id": "10",
+      "x_m": -4.8,
+      "y_m": 9.725,
+      "yaw_deg": 0,
+      "note": "新增，复访原07位置朝右",
+      "previous_id": "07R"
+    },
+    {
+      "id": "11",
+      "x_m": -1.45,
+      "y_m": 11.9,
+      "yaw_deg": -90,
+      "note": "原点，朝向调整以观察下一点",
+      "previous_id": "11"
+    },
+    {
+      "id": "12",
+      "x_m": -1.45,
+      "y_m": 6.5,
+      "yaw_deg": 0,
+      "note": "原点",
+      "previous_id": "12"
+    },
+    {
+      "id": "13",
+      "x_m": 2.3,
+      "y_m": 6.5,
+      "yaw_deg": 0,
+      "note": "原点",
+      "previous_id": "13"
+    },
+    {
+      "id": "14",
+      "x_m": 6.2,
+      "y_m": 6.5,
+      "yaw_deg": 0,
+      "note": "原点，朝右",
+      "previous_id": "14"
+    },
+    {
+      "id": "15",
+      "x_m": 10.05,
+      "y_m": 6.5,
+      "yaw_deg": 90,
+      "note": "原点",
+      "previous_id": "15"
+    },
+    {
+      "id": "16",
+      "x_m": 10.05,
+      "y_m": 11.9,
+      "yaw_deg": -90,
+      "note": "原点",
+      "previous_id": "17"
+    },
+    {
+      "id": "17",
+      "x_m": 10.05,
+      "y_m": 6.5,
+      "yaw_deg": 180,
+      "note": "新增，生产区返程",
+      "previous_id": "B"
+    },
+    {
+      "id": "18",
+      "x_m": 5.5,
+      "y_m": 6.5,
+      "yaw_deg": 180,
+      "note": "新增，生产区入口",
+      "previous_id": "C"
+    },
+    {
+      "id": "19",
+      "x_m": 0,
+      "y_m": 6.5,
+      "yaw_deg": -90,
+      "note": "新增，中央通道转向",
+      "previous_id": "D"
+    },
+    {
+      "id": "20",
+      "x_m": 0,
+      "y_m": 1.5,
+      "yaw_deg": -90,
+      "note": "新增，中央通道",
+      "previous_id": "E"
+    },
+    {
+      "id": "21",
+      "x_m": 0,
+      "y_m": -4,
+      "yaw_deg": -90,
+      "note": "原点",
+      "previous_id": "18"
+    },
+    {
+      "id": "22",
+      "x_m": 0,
+      "y_m": -9,
+      "yaw_deg": 180,
+      "note": "新增，南侧通道转向",
+      "previous_id": "F"
+    },
+    {
+      "id": "23",
+      "x_m": -4.5,
+      "y_m": -9,
+      "yaw_deg": 180,
+      "note": "新增，南侧通道",
+      "previous_id": "G"
+    },
+    {
+      "id": "24",
+      "x_m": -9,
+      "y_m": -9,
+      "yaw_deg": 0,
+      "note": "原点，朝向调整以观察下一点",
+      "previous_id": "19"
+    },
+    {
+      "id": "25",
+      "x_m": -4.5,
+      "y_m": -9,
+      "yaw_deg": 0,
+      "note": "新增，南侧返程",
+      "previous_id": "H"
+    },
+    {
+      "id": "26",
+      "x_m": 0,
+      "y_m": -9,
+      "yaw_deg": 0,
+      "note": "新增，南侧返程",
+      "previous_id": "I"
+    },
+    {
+      "id": "27",
+      "x_m": 4.5,
+      "y_m": -9,
+      "yaw_deg": 0,
+      "note": "新增，南侧返程",
+      "previous_id": "J"
+    },
+    {
+      "id": "28",
+      "x_m": 9,
+      "y_m": -9,
+      "yaw_deg": -90,
+      "note": "原点，终点",
+      "previous_id": "20"
+    }
+  ],
+  "segments": [
+    {
+      "from": "01",
+      "to": "02",
+      "forward_from_sensor_m": 2.605,
+      "lateral_m": 0.0,
+      "inside_detection_envelope": true,
+      "ground_point_in_camera_fov": true,
+      "ground_point_in_lidar_fov": true,
+      "minimum_obstacle_distance_m": 2.6336,
+      "nearest_obstacle": "inspection_forklift"
+    },
+    {
+      "from": "02",
+      "to": "03",
+      "forward_from_sensor_m": 4.38,
+      "lateral_m": 0.0,
+      "inside_detection_envelope": true,
+      "ground_point_in_camera_fov": true,
+      "ground_point_in_lidar_fov": true,
+      "minimum_obstacle_distance_m": 2.6336,
+      "nearest_obstacle": "inspection_forklift"
+    },
+    {
+      "from": "03",
+      "to": "04",
+      "forward_from_sensor_m": 5.18,
+      "lateral_m": 0.0,
+      "inside_detection_envelope": true,
+      "ground_point_in_camera_fov": true,
+      "ground_point_in_lidar_fov": true,
+      "minimum_obstacle_distance_m": 1.075,
+      "nearest_obstacle": "warehouse_rack_2"
+    },
+    {
+      "from": "04",
+      "to": "05",
+      "forward_from_sensor_m": 5.18,
+      "lateral_m": 0.0,
+      "inside_detection_envelope": true,
+      "ground_point_in_camera_fov": true,
+      "ground_point_in_lidar_fov": true,
+      "minimum_obstacle_distance_m": 1.075,
+      "nearest_obstacle": "warehouse_rack_2"
+    },
+    {
+      "from": "05",
+      "to": "06",
+      "forward_from_sensor_m": 1.68,
+      "lateral_m": 1.175,
+      "inside_detection_envelope": true,
+      "ground_point_in_camera_fov": true,
+      "ground_point_in_lidar_fov": true,
+      "minimum_obstacle_distance_m": 3.1757,
+      "nearest_obstacle": "warehouse_handcart"
+    },
+    {
+      "from": "06",
+      "to": "07",
+      "forward_from_sensor_m": 1.9597,
+      "lateral_m": 0.0,
+      "inside_detection_envelope": true,
+      "ground_point_in_camera_fov": true,
+      "ground_point_in_lidar_fov": true,
+      "minimum_obstacle_distance_m": 2.35,
+      "nearest_obstacle": "inspection_forklift"
+    },
+    {
+      "from": "07",
+      "to": "08",
+      "forward_from_sensor_m": 2.93,
+      "lateral_m": 0.0,
+      "inside_detection_envelope": true,
+      "ground_point_in_camera_fov": true,
+      "ground_point_in_lidar_fov": true,
+      "minimum_obstacle_distance_m": 2.35,
+      "nearest_obstacle": "inspection_forklift"
+    },
+    {
+      "from": "08",
+      "to": "09",
+      "forward_from_sensor_m": 5.18,
+      "lateral_m": 0.0,
+      "inside_detection_envelope": true,
+      "ground_point_in_camera_fov": true,
+      "ground_point_in_lidar_fov": true,
+      "minimum_obstacle_distance_m": 1.075,
+      "nearest_obstacle": "warehouse_rack_2"
+    },
+    {
+      "from": "09",
+      "to": "10",
+      "forward_from_sensor_m": 5.18,
+      "lateral_m": 0.0,
+      "inside_detection_envelope": true,
+      "ground_point_in_camera_fov": true,
+      "ground_point_in_lidar_fov": true,
+      "minimum_obstacle_distance_m": 1.075,
+      "nearest_obstacle": "warehouse_rack_2"
+    },
+    {
+      "from": "10",
+      "to": "11",
+      "forward_from_sensor_m": 2.93,
+      "lateral_m": 2.175,
+      "inside_detection_envelope": true,
+      "ground_point_in_camera_fov": true,
+      "ground_point_in_lidar_fov": true,
+      "minimum_obstacle_distance_m": 2.0795,
+      "nearest_obstacle": "pillar_2"
+    },
+    {
+      "from": "11",
+      "to": "12",
+      "forward_from_sensor_m": 4.98,
+      "lateral_m": -0.0,
+      "inside_detection_envelope": true,
+      "ground_point_in_camera_fov": true,
+      "ground_point_in_lidar_fov": true,
+      "minimum_obstacle_distance_m": 2.35,
+      "nearest_obstacle": "inspection_forklift"
+    },
+    {
+      "from": "12",
+      "to": "13",
+      "forward_from_sensor_m": 3.33,
+      "lateral_m": 0.0,
+      "inside_detection_envelope": true,
+      "ground_point_in_camera_fov": true,
+      "ground_point_in_lidar_fov": true,
+      "minimum_obstacle_distance_m": 2.3803,
+      "nearest_obstacle": "production_post_gate_lower"
+    },
+    {
+      "from": "13",
+      "to": "14",
+      "forward_from_sensor_m": 3.48,
+      "lateral_m": 0.0,
+      "inside_detection_envelope": true,
+      "ground_point_in_camera_fov": true,
+      "ground_point_in_lidar_fov": true,
+      "minimum_obstacle_distance_m": 1.0,
+      "nearest_obstacle": "production_post_gate_lower"
+    },
+    {
+      "from": "14",
+      "to": "15",
+      "forward_from_sensor_m": 3.43,
+      "lateral_m": 0.0,
+      "inside_detection_envelope": true,
+      "ground_point_in_camera_fov": true,
+      "ground_point_in_lidar_fov": true,
+      "minimum_obstacle_distance_m": 1.9379,
+      "nearest_obstacle": "production_post_gate_lower"
+    },
+    {
+      "from": "15",
+      "to": "16",
+      "forward_from_sensor_m": 4.98,
+      "lateral_m": 0.0,
+      "inside_detection_envelope": true,
+      "ground_point_in_camera_fov": true,
+      "ground_point_in_lidar_fov": true,
+      "minimum_obstacle_distance_m": 1.025,
+      "nearest_obstacle": "production_fence_north"
+    },
+    {
+      "from": "16",
+      "to": "17",
+      "forward_from_sensor_m": 4.98,
+      "lateral_m": -0.0,
+      "inside_detection_envelope": true,
+      "ground_point_in_camera_fov": true,
+      "ground_point_in_lidar_fov": true,
+      "minimum_obstacle_distance_m": 1.025,
+      "nearest_obstacle": "production_fence_north"
+    },
+    {
+      "from": "17",
+      "to": "18",
+      "forward_from_sensor_m": 4.13,
+      "lateral_m": 0.0,
+      "inside_detection_envelope": true,
+      "ground_point_in_camera_fov": true,
+      "ground_point_in_lidar_fov": true,
+      "minimum_obstacle_distance_m": 1.3862,
+      "nearest_obstacle": "production_post_gate_lower"
+    },
+    {
+      "from": "18",
+      "to": "19",
+      "forward_from_sensor_m": 5.08,
+      "lateral_m": 0.0,
+      "inside_detection_envelope": true,
+      "ground_point_in_camera_fov": true,
+      "ground_point_in_lidar_fov": true,
+      "minimum_obstacle_distance_m": 1.0,
+      "nearest_obstacle": "production_post_gate_lower"
+    },
+    {
+      "from": "19",
+      "to": "20",
+      "forward_from_sensor_m": 4.58,
+      "lateral_m": -0.0,
+      "inside_detection_envelope": true,
+      "ground_point_in_camera_fov": true,
+      "ground_point_in_lidar_fov": true,
+      "minimum_obstacle_distance_m": 2.6571,
+      "nearest_obstacle": "inspection_forklift"
+    },
+    {
+      "from": "20",
+      "to": "21",
+      "forward_from_sensor_m": 5.08,
+      "lateral_m": -0.0,
+      "inside_detection_envelope": true,
+      "ground_point_in_camera_fov": true,
+      "ground_point_in_lidar_fov": true,
+      "minimum_obstacle_distance_m": 2.7,
+      "nearest_obstacle": "maintenance_spares_cabinet"
+    },
+    {
+      "from": "21",
+      "to": "22",
+      "forward_from_sensor_m": 4.58,
+      "lateral_m": -0.0,
+      "inside_detection_envelope": true,
+      "ground_point_in_camera_fov": true,
+      "ground_point_in_lidar_fov": true,
+      "minimum_obstacle_distance_m": 2.6,
+      "nearest_obstacle": "packing_pallets"
+    },
+    {
+      "from": "22",
+      "to": "23",
+      "forward_from_sensor_m": 4.08,
+      "lateral_m": 0.0,
+      "inside_detection_envelope": true,
+      "ground_point_in_camera_fov": true,
+      "ground_point_in_lidar_fov": true,
+      "minimum_obstacle_distance_m": 2.2,
+      "nearest_obstacle": "maintenance_tool_cabinet"
+    },
+    {
+      "from": "23",
+      "to": "24",
+      "forward_from_sensor_m": 4.08,
+      "lateral_m": 0.0,
+      "inside_detection_envelope": true,
+      "ground_point_in_camera_fov": true,
+      "ground_point_in_lidar_fov": true,
+      "minimum_obstacle_distance_m": 2.2,
+      "nearest_obstacle": "office_cabinet"
+    },
+    {
+      "from": "24",
+      "to": "25",
+      "forward_from_sensor_m": 4.08,
+      "lateral_m": 0.0,
+      "inside_detection_envelope": true,
+      "ground_point_in_camera_fov": true,
+      "ground_point_in_lidar_fov": true,
+      "minimum_obstacle_distance_m": 2.2,
+      "nearest_obstacle": "office_cabinet"
+    },
+    {
+      "from": "25",
+      "to": "26",
+      "forward_from_sensor_m": 4.08,
+      "lateral_m": 0.0,
+      "inside_detection_envelope": true,
+      "ground_point_in_camera_fov": true,
+      "ground_point_in_lidar_fov": true,
+      "minimum_obstacle_distance_m": 2.2,
+      "nearest_obstacle": "maintenance_tool_cabinet"
+    },
+    {
+      "from": "26",
+      "to": "27",
+      "forward_from_sensor_m": 4.08,
+      "lateral_m": 0.0,
+      "inside_detection_envelope": true,
+      "ground_point_in_camera_fov": true,
+      "ground_point_in_lidar_fov": true,
+      "minimum_obstacle_distance_m": 2.1,
+      "nearest_obstacle": "utility_spares"
+    },
+    {
+      "from": "27",
+      "to": "28",
+      "forward_from_sensor_m": 4.08,
+      "lateral_m": 0.0,
+      "inside_detection_envelope": true,
+      "ground_point_in_camera_fov": true,
+      "ground_point_in_lidar_fov": true,
+      "minimum_obstacle_distance_m": 2.0,
+      "nearest_obstacle": "utility_pump"
+    }
+  ],
+  "id_convention": "01–28 按巡检顺序编号；previous_id 为旧方案标识，仅用于追溯",
+  "scene": "factory_20261030_closed_shutter"
+}

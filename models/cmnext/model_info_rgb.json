@@ -1,0 +1,17 @@
+{
+  "repository": "InSAI-Lab/CMNeXt",
+  "official_model_zoo": "https://github.com/InSAI-Lab/DELIVER#kitti360-dataset",
+  "revision": "a4425e9f53b249707add03a1a693f466ad9ca1b7",
+  "remote_path": "KITTI360/cmnext_b2_kitti360_rgb.pth",
+  "download_url": "https://huggingface.co/InSAI-Lab/CMNeXt/resolve/a4425e9f53b249707add03a1a693f466ad9ca1b7/KITTI360/cmnext_b2_kitti360_rgb.pth",
+  "local_file": "cmnext_b2_kitti360_rgb.pth",
+  "download_cache_windows": "D:\\Downloads\\cmnext\\cmnext_b2_kitti360_rgb.pth",
+  "bytes": 103256265,
+  "sha256": "be565661c66748a1088e539aaad464889eead538ef772bdebd29526f4ad7844a",
+  "architecture": "CMNeXt-B2",
+  "modalities": [
+    "img"
+  ],
+  "dataset": "KITTI360",
+  "num_classes": 19
+}

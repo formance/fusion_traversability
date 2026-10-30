@@ -1,0 +1,7 @@
+- ros_topic_name: /lidar/points_raw
+  gz_topic_name: /sim/lidar/points
+  ros_type_name: sensor_msgs/msg/PointCloud2
+  gz_type_name: gz.msgs.PointCloudPacked
+  direction: GZ_TO_ROS
+  publisher_queue: 1
+  subscriber_queue: 1

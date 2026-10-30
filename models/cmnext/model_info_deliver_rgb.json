@@ -1,0 +1,9 @@
+{
+  "repository": "InSAI-Lab/CMNeXt",
+  "revision": "a4425e9f53b249707add03a1a693f466ad9ca1b7",
+  "remote_path": "DELIVER/cmnext_b2_deliver_rgb.pth",
+  "sha256": "5f6031323bf2a199a66f3ada811b42b3acc9128351d8a463e2030143527c28a6",
+  "bytes": 103268553,
+  "dataset": "DELIVER",
+  "num_classes": 25
+}

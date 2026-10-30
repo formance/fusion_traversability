@@ -1,0 +1,220 @@
+{
+  "base_frame": "base_link",
+  "units": {
+    "translation": "m",
+    "rotation": "rad",
+    "frequency": "Hz"
+  },
+  "camera": {
+    "reference": "e-con See3CAM_24CUG with standard supplied lens (nominal FOV approximation)",
+    "type": "camera",
+    "width": 1920,
+    "height": 1200,
+    "update_rate": 15.0,
+    "horizontal_fov_rad": 1.8256143975860686,
+    "format": "R8G8B8",
+    "distortion_coefficients": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "pose_xyz": [
+      0.42,
+      0.0,
+      0.65
+    ],
+    "pose_rpy": [
+      0.0,
+      0.2617993877991494,
+      0.0
+    ],
+    "frame": "camera_link",
+    "optical_frame": "camera_optical_frame",
+    "optical_frame_rpy": [
+      -1.5707963267948966,
+      0.0,
+      -1.5707963267948966
+    ],
+    "near_clip_m": 0.05,
+    "far_clip_m": 120.0,
+    "clip_note": "Engineering rendering settings, not dataset hardware specifications",
+    "intrinsics_source": "Nominal supplied-lens H/V FOV converted to an ideal pinhole approximation; NOT measured device calibration. Rendering K/P and CameraInfo use the same values.",
+    "image_topic": "/camera/image_raw",
+    "camera_info_topic": "/camera/camera_info",
+    "vertical_fov_rad": 1.075122819228507,
+    "simulation_intrinsics": {
+      "fx": 741.9723177047106,
+      "fy": 1006.5093637984188,
+      "cx": 960.0,
+      "cy": 600.0,
+      "skew": 0.0
+    },
+    "hardware_mode": "1920x1200 UYVY over USB 3, 55 FPS reference; Gazebo publishes converted RGB without UYVY transport simulation",
+    "shutter": "global; Gazebo uses an instantaneous frame, without real exposure/blur simulation",
+    "fidelity_limits": [
+      "No serial-specific real camera intrinsics or distortion calibration",
+      "Nominal 104.6x61.6 degree envelope is an approximation; fx/fy are independently derived to match it",
+      "No physical lens response, exposure or image-noise calibration"
+    ],
+    "source_url": "https://www.e-consystems.com/industrial-cameras/ar0234-usb3-global-shutter-camera.asp",
+    "simulation_rate_note": "Simulation source publishes 15 Hz to reduce load; hardware reference can provide 55 FPS at this resolution."
+  },
+  "lidar": {
+    "reference": "RoboSense EM4-T coverage approximation with reduced simulation sampling density",
+    "type": "gpu_lidar",
+    "vertical_samples": 260,
+    "update_rate": 10.0,
+    "horizontal_fov_deg": 120.0,
+    "vertical_min_rad": -0.2181661564992912,
+    "vertical_max_rad": 0.2181661564992912,
+    "pose_xyz": [
+      0.42,
+      0.0,
+      0.4
+    ],
+    "pose_rpy": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "frame": "lidar_link",
+    "simulation_horizontal_samples": 600,
+    "simulation_range_min_m": 1.0,
+    "simulation_range_max_m": 120.0,
+    "simulation_range_resolution_m": 0.01,
+    "simulation_noise_stddev_m": 0.05,
+    "sampling_note": "Low-density simulation profile: 600 x 260 uniform directions, 156000 rays/frame at 10 Hz (75 percent fewer directions than 1200 x 520). Original angular endpoints retained: horizontal [-60,59.9] degrees, vertical [-12.5,12.5] degrees. Spacing H=0.20016694 degree and V=0.09652510 degree. A reduced-load coverage approximation, not nominal EM4-T 520-line sampling or its central ROI mode.",
+    "range_note": "1 m nominal blind range; 120 m simulation cap for this project, not EM4-T maximum hardware range. Gaussian range noise sigma=0.05 m is a simplified engineering model, not calibrated reflectance-dependent error.",
+    "fidelity_limits": [
+      "No measured partition/per-channel angular offsets",
+      "No central 40-degree high-resolution ROI scan mode",
+      "No physical reflectance/intensity calibration",
+      "No rotating-mirror per-point firing time or scan motion distortion",
+      "No realistic glass/multipath or rain/fog model"
+    ],
+    "points_topic": "/lidar/points_raw",
+    "simulation_horizontal_min_rad": -1.0471975511965976,
+    "simulation_horizontal_max_rad": 1.0454522219446034,
+    "source_url": "https://robosense-robotics.github.io/product-manual/EM4/"
+  },
+  "synchronization": {
+    "use_sim_time": true,
+    "method": "nearest_timestamp_without_cloud_reuse",
+    "maximum_pair_delta_s": 0.05,
+    "maximum_input_age_s": 0.5,
+    "max_pending_inference": 1,
+    "drop_stale_inputs": true,
+    "note": "15 Hz RGB and 10 Hz LiDAR are independently sampled; select nearest pairs and drop stale frames. Sensor update rate is simulation time, not guaranteed wall-clock throughput."
+  },
+  "ego_filter_boxes": [
+    {
+      "name": "body",
+      "bounds_xyz": [
+        [
+          -0.33,
+          0.33
+        ],
+        [
+          -0.41,
+          0.41
+        ],
+        [
+          -0.03,
+          0.34
+        ]
+      ]
+    },
+    {
+      "name": "front_bracket",
+      "bounds_xyz": [
+        [
+          0.21,
+          0.49
+        ],
+        [
+          -0.06,
+          0.06
+        ],
+        [
+          0.28,
+          0.34
+        ]
+      ]
+    },
+    {
+      "name": "camera_body",
+      "bounds_xyz": [
+        [
+          0.36,
+          0.46
+        ],
+        [
+          -0.06,
+          0.06
+        ],
+        [
+          0.6,
+          0.7
+        ]
+      ]
+    },
+    {
+      "name": "front_masts",
+      "bounds_xyz": [
+        [
+          0.395,
+          0.445
+        ],
+        [
+          -0.025,
+          0.025
+        ],
+        [
+          0.29,
+          0.67
+        ]
+      ]
+    },
+    {
+      "name": "lidar_body",
+      "bounds_xyz": [
+        [
+          0.27,
+          0.45
+        ],
+        [
+          -0.095,
+          0.095
+        ],
+        [
+          0.35,
+          0.45
+        ]
+      ]
+    }
+  ],
+  "detection_region": {
+    "reference_frame": "front_perception",
+    "reference_pose_in_base_xyz": [
+      0.42,
+      0.0,
+      0.0
+    ],
+    "x_range_m": [
+      1.0,
+      8.0
+    ],
+    "y_range_m": [
+      -3.0,
+      3.0
+    ],
+    "base_x_range_m": [
+      1.42,
+      8.42
+    ],
+    "mode": "evaluation_envelope_only_no_raw_sensor_crop",
+    "note": "Near field may narrow with sensor FOV. At 0.4 m height, horizontal EM4-T sees central flat ground from about 1.80 m relative to this reference. Unobserved area is not free space."
+  }
+}

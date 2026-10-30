@@ -1,0 +1,15 @@
+{
+  "repository": "InSAI-Lab/CMNeXt",
+  "revision": "a4425e9f53b249707add03a1a693f466ad9ca1b7",
+  "remote_path": "KITTI360/cmnext_b2_kitti360_rgbl.pth",
+  "local_file": "cmnext_b2_kitti360_rgbl.pth",
+  "bytes": 235187265,
+  "sha256": "64eae3316c60a50281c612e642e8405fbb025621dafdddd62fbc7c160a73fe14",
+  "architecture": "CMNeXt-B2",
+  "modalities": [
+    "img",
+    "lidar"
+  ],
+  "dataset": "KITTI360",
+  "num_classes": 19
+}

@@ -1,0 +1,8 @@
+**
+!src/
+!src/cmnext_inference/
+!src/cmnext_inference/**
+!docker/
+!docker/Dockerfile.cmnext
+**/__pycache__/
+**/*.pyc

@@ -24,7 +24,7 @@ class Session:
         self.stop = False
         self.reason = ''
         self.compose_attempted = False
-        self.compose = ['docker', 'compose', '-f', str(ROOT/'docker/compose.inference.yaml')]
+        self.compose = ['docker', 'compose', '-f', str(ROOT/'config/docker/compose.inference.yaml')]
         self.endpoint = 'http://127.0.0.1:' + os.environ.get('CMNEXT_PORT', '8765')
         self.http = urllib.request.build_opener(urllib.request.ProxyHandler({}))
         self.terminal = None
@@ -112,7 +112,7 @@ class Session:
             try:
                 with self.http.open(self.endpoint+'/ready', timeout=1) as response:
                     if json.load(response).get('ready'):
-                        print('Docker CMNeXt model is ready.', flush=True)
+                        print('Docker StitchFusion model is ready.', flush=True)
                         return True
             except (OSError, ValueError):
                 pass
@@ -163,7 +163,7 @@ class Session:
         print('Focus the result window: W/X move one step, A/D turn one step (hold does not repeat).',flush=True)
         print('Q / Esc or closing the independent result window also exits the entire session.', flush=True)
         print('Logs: '+str(self.log_dir), flush=True)
-        subprocess.run(['docker','image','inspect','fusion_traversability_cmnext:latest'],
+        subprocess.run(['docker','image','inspect','fusion_traversability_stitchfusion:latest'],
                        check=True, stdout=subprocess.DEVNULL, timeout=15)
         self.compose_attempted = True
         compose = self.start('compose', self.compose+['up','-d','--no-build','--pull','never','inference'])
@@ -172,16 +172,18 @@ class Session:
         command = ['ros2','launch',str(ROOT/'src/factory_sim/launch/simulation.launch.py')]
         command += [name+':='+str(getattr(self.args,name)).lower() for name in ('headless','paused')]
         self.start('gazebo', command)
+        if not self.args.headless:
+            self.start('gui_roof',['/usr/bin/python3','-m','factory_sim.runtime.gui_roof'])
         self.start('step_controller',['/usr/bin/python3','-m','factory_sim.runtime.step_controller','--config',self.args.control_config])
         if not self.wait_ready():
             return
-        command = ['/usr/bin/python3','-m','cmnext_inference.runner.semantic_node',
+        command = ['/usr/bin/python3','-m','perception.ros.semantic_node',
                    '--endpoint',self.endpoint,'--max-fps',str(self.args.max_fps),
                    '--save-every',str(self.args.save_every)]
         self.start('ros_inference',command)
         names = ['gazebo','ros_inference','step_controller']
         if not self.args.no_viewer:
-            self.start('viewer',['/usr/bin/python3','-m','cmnext_inference.runner.viewer','--width',str(self.args.viewer_width)])
+            self.start('viewer',['/usr/bin/python3','-m','perception.visualization.viewer','--width',str(self.args.viewer_width)])
             names.append('viewer')
         self.write_state('running')
         next_check = 0.
@@ -237,7 +239,7 @@ class Session:
             except subprocess.TimeoutExpired: pass
         if self.compose_attempted:
             try:
-                logs=subprocess.run(self.compose+['logs','--no-color','--tail','200','inference'],capture_output=True,text=True,timeout=10)
+                logs=subprocess.run(self.compose+['logs','--no-color','--tail','200',getattr(self,'inference_service','inference')],capture_output=True,text=True,timeout=10)
                 (self.log_dir/'inference_container.log').write_text(logs.stdout+logs.stderr)
                 result=subprocess.run(self.compose+['down','--timeout','5'],capture_output=True,text=True,timeout=30)
                 (self.log_dir/'docker_stop.log').write_text(result.stdout+result.stderr)
@@ -257,7 +259,7 @@ class Session:
         print('Session stopped. Logs: '+str(self.log_dir), flush=True)
 
 def main():
-    parser=argparse.ArgumentParser(description='Start factory simulation, Docker CMNeXt and independent vertical result viewer; Q/Esc/Ctrl+C exits all.')
+    parser=argparse.ArgumentParser(description='Start factory simulation, Docker StitchFusion and independent vertical result viewer; Q/Esc/Ctrl+C exits all.')
     for name in ('headless','paused','no-viewer'):
         parser.add_argument('--'+name,action='store_true')
     parser.add_argument('--resource-config',default=str(ROOT/'config/resources.json'))

@@ -14,6 +14,10 @@ export RMW_IMPLEMENTATION="${RMW_IMPLEMENTATION:-rmw_fastrtps_cpp}"
 if [[ "$RMW_IMPLEMENTATION" == "rmw_fastrtps_cpp" ]]; then
   export FASTRTPS_DEFAULT_PROFILES_FILE="${FASTRTPS_DEFAULT_PROFILES_FILE:-$project/config/fastdds.xml}"
 fi
+if [[ "${1:-}" == "--ros2" ]]; then
+  shift
+  exec ros2 "$@"
+fi
 export FUSION_STATE_DIR="${XDG_STATE_HOME:-$HOME/.local/state}/fusion_traversability"
 export ROS_LOG_DIR="$FUSION_STATE_DIR/ros"
 export PYTHONDONTWRITEBYTECODE=1
@@ -23,10 +27,17 @@ if grep -qi microsoft /proc/sys/kernel/osrelease; then
   export MESA_D3D12_DEFAULT_ADAPTER_NAME="${MESA_D3D12_DEFAULT_ADAPTER_NAME:-NVIDIA}"
 fi
 # Thin XYZ products and OpenCV kernels are faster without per-process BLAS oversubscription.
+export MALLOC_ARENA_MAX=2
+export MALLOC_TRIM_THRESHOLD_=131072
 export OPENBLAS_NUM_THREADS="${FUSION_NUMERICAL_THREADS:-1}"
 export OMP_NUM_THREADS="${FUSION_NUMERICAL_THREADS:-1}"
 export MKL_NUM_THREADS="${FUSION_NUMERICAL_THREADS:-1}"
 export PYTHONPATH="$project/src${PYTHONPATH:+:$PYTHONPATH}"
 export GZ_SIM_RESOURCE_PATH="$project/src/factory_sim/models${GZ_SIM_RESOURCE_PATH:+:$GZ_SIM_RESOURCE_PATH}"
 mkdir -p -- "$ROS_LOG_DIR"
+printf '查看 ROS 话题：%s/run.sh --ros2 topic list --no-daemon\n' "$project"
+if [[ "${1:-}" == "--capture" ]]; then
+  shift
+  exec /usr/bin/python3 -m factory_sim.capture.session "$@"
+fi
 exec /usr/bin/python3 -m factory_sim.runtime.session "$@"

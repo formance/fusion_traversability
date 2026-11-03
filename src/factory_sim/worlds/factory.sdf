@@ -8645,218 +8645,24 @@
     </model>
     <model name="worker_01">
       <static>true</static>
-      <pose>-7 4.5 0 0 0 0.00000000</pose>
+      <pose>-7 4.5 0 0 0 2.8198420991931505</pose>
       <link name="body">
         <collision name="envelope">
-          <pose>0 0 0.84 0 0 0</pose>
+          <pose>0 0 0.854143 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.3</radius>
-              <length>1.68</length>
+              <radius>0.5</radius>
+              <length>1.7082867622375488</length>
             </cylinder>
           </geometry>
         </collision>
-        <visual name="leg_0">
-          <pose>0 -0.105 0.45 0 0 0</pose>
+        <visual name="worker_mesh">
           <geometry>
-            <cylinder>
-              <radius>0.09</radius>
-              <length>0.72</length>
-            </cylinder>
+            <mesh>
+              <uri>model://factory_worker/meshes/worker_shelf_check.obj</uri>
+            </mesh>
           </geometry>
-          <material>
-            <ambient>0.084 0.175 0.252 1</ambient>
-            <diffuse>0.12 0.25 0.36 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="shoe_0">
-          <pose>0.045 -0.105 0.075 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.27 0.15 0.15</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.063 0.0735 0.084 1</ambient>
-            <diffuse>0.09 0.105 0.12 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="leg_1">
-          <pose>0 0.105 0.45 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.09</radius>
-              <length>0.72</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.084 0.175 0.252 1</ambient>
-            <diffuse>0.12 0.25 0.36 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="shoe_1">
-          <pose>0.045 0.105 0.075 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.27 0.15 0.15</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.063 0.0735 0.084 1</ambient>
-            <diffuse>0.09 0.105 0.12 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="torso">
-          <pose>0 0 1.08 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.23 0.4 0.56</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.084 0.175 0.252 1</ambient>
-            <diffuse>0.12 0.25 0.36 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="vest">
-          <pose>0.012 0 1.12 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.245 0.415 0.43</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.644 0.441 0.07 1</ambient>
-            <diffuse>0.92 0.63 0.1 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="reflective">
-          <pose>0.022 0 1.08 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.25 0.42 0.055</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.546 0.574 0.546 1</ambient>
-            <diffuse>0.78 0.82 0.78 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="arm_0">
-          <pose>0 -0.245 1.07 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.055</radius>
-              <length>0.5</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.084 0.175 0.252 1</ambient>
-            <diffuse>0.12 0.25 0.36 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hand_0">
-          <pose>0 -0.245 0.8 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.055</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="arm_1">
-          <pose>0 0.245 1.07 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.055</radius>
-              <length>0.5</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.084 0.175 0.252 1</ambient>
-            <diffuse>0.12 0.25 0.36 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hand_1">
-          <pose>0 0.245 0.8 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.055</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="neck">
-          <pose>0 0 1.405 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.065</radius>
-              <length>0.1</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="head">
-          <pose>0 0 1.52 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.125</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hardhat">
-          <pose>0 0 1.647 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.14</radius>
-              <length>0.106</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.637 0.525 0.098 1</ambient>
-            <diffuse>0.91 0.75 0.14 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hat_brim">
-          <pose>0.025 0 1.606 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.158</radius>
-              <length>0.025</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.637 0.525 0.098 1</ambient>
-            <diffuse>0.91 0.75 0.14 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
+          <cast_shadows>true</cast_shadows>
         </visual>
       </link>
       <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
@@ -8865,218 +8671,24 @@
     </model>
     <model name="worker_02">
       <static>true</static>
-      <pose>-6 12.5 0 0 0 0.00000000</pose>
+      <pose>-6 12.5 0 0 0 -2.875340604438868</pose>
       <link name="body">
         <collision name="envelope">
-          <pose>0 0 0.84 0 0 0</pose>
+          <pose>0 0 0.855875 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.3</radius>
-              <length>1.68</length>
+              <radius>0.31</radius>
+              <length>1.711749792098999</length>
             </cylinder>
           </geometry>
         </collision>
-        <visual name="leg_0">
-          <pose>0 -0.105 0.45 0 0 0</pose>
+        <visual name="worker_mesh">
           <geometry>
-            <cylinder>
-              <radius>0.09</radius>
-              <length>0.72</length>
-            </cylinder>
+            <mesh>
+              <uri>model://factory_worker/meshes/worker_shelf_observe.obj</uri>
+            </mesh>
           </geometry>
-          <material>
-            <ambient>0.14 0.231 0.168 1</ambient>
-            <diffuse>0.2 0.33 0.24 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="shoe_0">
-          <pose>0.045 -0.105 0.075 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.27 0.15 0.15</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.063 0.0735 0.084 1</ambient>
-            <diffuse>0.09 0.105 0.12 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="leg_1">
-          <pose>0 0.105 0.45 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.09</radius>
-              <length>0.72</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.14 0.231 0.168 1</ambient>
-            <diffuse>0.2 0.33 0.24 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="shoe_1">
-          <pose>0.045 0.105 0.075 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.27 0.15 0.15</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.063 0.0735 0.084 1</ambient>
-            <diffuse>0.09 0.105 0.12 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="torso">
-          <pose>0 0 1.08 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.23 0.4 0.56</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.14 0.231 0.168 1</ambient>
-            <diffuse>0.2 0.33 0.24 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="vest">
-          <pose>0.012 0 1.12 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.245 0.415 0.43</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.644 0.441 0.07 1</ambient>
-            <diffuse>0.92 0.63 0.1 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="reflective">
-          <pose>0.022 0 1.08 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.25 0.42 0.055</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.546 0.574 0.546 1</ambient>
-            <diffuse>0.78 0.82 0.78 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="arm_0">
-          <pose>0 -0.245 1.07 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.055</radius>
-              <length>0.5</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.14 0.231 0.168 1</ambient>
-            <diffuse>0.2 0.33 0.24 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hand_0">
-          <pose>0 -0.245 0.8 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.055</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="arm_1">
-          <pose>0 0.245 1.07 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.055</radius>
-              <length>0.5</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.14 0.231 0.168 1</ambient>
-            <diffuse>0.2 0.33 0.24 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hand_1">
-          <pose>0 0.245 0.8 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.055</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="neck">
-          <pose>0 0 1.405 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.065</radius>
-              <length>0.1</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="head">
-          <pose>0 0 1.52 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.125</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hardhat">
-          <pose>0 0 1.647 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.14</radius>
-              <length>0.106</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.637 0.525 0.098 1</ambient>
-            <diffuse>0.91 0.75 0.14 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hat_brim">
-          <pose>0.025 0 1.606 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.158</radius>
-              <length>0.025</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.637 0.525 0.098 1</ambient>
-            <diffuse>0.91 0.75 0.14 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
+          <cast_shadows>true</cast_shadows>
         </visual>
       </link>
       <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
@@ -9085,218 +8697,24 @@
     </model>
     <model name="worker_03">
       <static>true</static>
-      <pose>6 8.5 0 0 0 0.00000000</pose>
+      <pose>6 8.5 0 0 0 0.7853981633974483</pose>
       <link name="body">
         <collision name="envelope">
-          <pose>0 0 0.84 0 0 0</pose>
+          <pose>0 0 0.836443 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.3</radius>
-              <length>1.68</length>
+              <radius>0.42</radius>
+              <length>1.6728862524032593</length>
             </cylinder>
           </geometry>
         </collision>
-        <visual name="leg_0">
-          <pose>0 -0.105 0.45 0 0 0</pose>
+        <visual name="worker_mesh">
           <geometry>
-            <cylinder>
-              <radius>0.09</radius>
-              <length>0.72</length>
-            </cylinder>
+            <mesh>
+              <uri>model://factory_worker/meshes/worker_machine_inspect.obj</uri>
+            </mesh>
           </geometry>
-          <material>
-            <ambient>0.196 0.203 0.224 1</ambient>
-            <diffuse>0.28 0.29 0.32 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="shoe_0">
-          <pose>0.045 -0.105 0.075 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.27 0.15 0.15</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.063 0.0735 0.084 1</ambient>
-            <diffuse>0.09 0.105 0.12 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="leg_1">
-          <pose>0 0.105 0.45 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.09</radius>
-              <length>0.72</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.196 0.203 0.224 1</ambient>
-            <diffuse>0.28 0.29 0.32 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="shoe_1">
-          <pose>0.045 0.105 0.075 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.27 0.15 0.15</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.063 0.0735 0.084 1</ambient>
-            <diffuse>0.09 0.105 0.12 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="torso">
-          <pose>0 0 1.08 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.23 0.4 0.56</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.196 0.203 0.224 1</ambient>
-            <diffuse>0.28 0.29 0.32 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="vest">
-          <pose>0.012 0 1.12 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.245 0.415 0.43</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.644 0.441 0.07 1</ambient>
-            <diffuse>0.92 0.63 0.1 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="reflective">
-          <pose>0.022 0 1.08 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.25 0.42 0.055</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.546 0.574 0.546 1</ambient>
-            <diffuse>0.78 0.82 0.78 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="arm_0">
-          <pose>0 -0.245 1.07 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.055</radius>
-              <length>0.5</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.196 0.203 0.224 1</ambient>
-            <diffuse>0.28 0.29 0.32 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hand_0">
-          <pose>0 -0.245 0.8 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.055</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="arm_1">
-          <pose>0 0.245 1.07 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.055</radius>
-              <length>0.5</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.196 0.203 0.224 1</ambient>
-            <diffuse>0.28 0.29 0.32 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hand_1">
-          <pose>0 0.245 0.8 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.055</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="neck">
-          <pose>0 0 1.405 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.065</radius>
-              <length>0.1</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="head">
-          <pose>0 0 1.52 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.125</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hardhat">
-          <pose>0 0 1.647 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.14</radius>
-              <length>0.106</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.637 0.525 0.098 1</ambient>
-            <diffuse>0.91 0.75 0.14 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hat_brim">
-          <pose>0.025 0 1.606 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.158</radius>
-              <length>0.025</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.637 0.525 0.098 1</ambient>
-            <diffuse>0.91 0.75 0.14 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
+          <cast_shadows>true</cast_shadows>
         </visual>
       </link>
       <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
@@ -9305,218 +8723,24 @@
     </model>
     <model name="worker_04">
       <static>true</static>
-      <pose>12 7.5 0 0 0 3.14159265</pose>
+      <pose>12 7.5 0 0 0 1.4840579881189118</pose>
       <link name="body">
         <collision name="envelope">
-          <pose>0 0 0.84 0 0 0</pose>
+          <pose>0 0 0.842679 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.3</radius>
-              <length>1.68</length>
+              <radius>0.51</radius>
+              <length>1.6853582859039307</length>
             </cylinder>
           </geometry>
         </collision>
-        <visual name="leg_0">
-          <pose>0 -0.105 0.45 0 0 0</pose>
+        <visual name="worker_mesh">
           <geometry>
-            <cylinder>
-              <radius>0.09</radius>
-              <length>0.72</length>
-            </cylinder>
+            <mesh>
+              <uri>model://factory_worker/meshes/worker_tablet_log.obj</uri>
+            </mesh>
           </geometry>
-          <material>
-            <ambient>0.105 0.21 0.252 1</ambient>
-            <diffuse>0.15 0.3 0.36 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="shoe_0">
-          <pose>0.045 -0.105 0.075 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.27 0.15 0.15</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.063 0.0735 0.084 1</ambient>
-            <diffuse>0.09 0.105 0.12 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="leg_1">
-          <pose>0 0.105 0.45 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.09</radius>
-              <length>0.72</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.105 0.21 0.252 1</ambient>
-            <diffuse>0.15 0.3 0.36 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="shoe_1">
-          <pose>0.045 0.105 0.075 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.27 0.15 0.15</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.063 0.0735 0.084 1</ambient>
-            <diffuse>0.09 0.105 0.12 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="torso">
-          <pose>0 0 1.08 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.23 0.4 0.56</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.105 0.21 0.252 1</ambient>
-            <diffuse>0.15 0.3 0.36 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="vest">
-          <pose>0.012 0 1.12 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.245 0.415 0.43</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.644 0.441 0.07 1</ambient>
-            <diffuse>0.92 0.63 0.1 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="reflective">
-          <pose>0.022 0 1.08 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.25 0.42 0.055</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.546 0.574 0.546 1</ambient>
-            <diffuse>0.78 0.82 0.78 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="arm_0">
-          <pose>0 -0.245 1.07 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.055</radius>
-              <length>0.5</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.105 0.21 0.252 1</ambient>
-            <diffuse>0.15 0.3 0.36 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hand_0">
-          <pose>0 -0.245 0.8 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.055</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="arm_1">
-          <pose>0 0.245 1.07 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.055</radius>
-              <length>0.5</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.105 0.21 0.252 1</ambient>
-            <diffuse>0.15 0.3 0.36 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hand_1">
-          <pose>0 0.245 0.8 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.055</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="neck">
-          <pose>0 0 1.405 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.065</radius>
-              <length>0.1</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="head">
-          <pose>0 0 1.52 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.125</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hardhat">
-          <pose>0 0 1.647 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.14</radius>
-              <length>0.106</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.637 0.525 0.098 1</ambient>
-            <diffuse>0.91 0.75 0.14 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hat_brim">
-          <pose>0.025 0 1.606 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.158</radius>
-              <length>0.025</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.637 0.525 0.098 1</ambient>
-            <diffuse>0.91 0.75 0.14 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
+          <cast_shadows>true</cast_shadows>
         </visual>
       </link>
       <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
@@ -9525,218 +8749,24 @@
     </model>
     <model name="worker_05">
       <static>true</static>
-      <pose>-9 -11 0 0 0 0.00000000</pose>
+      <pose>-9 -11 0 0 0 -2.936197264400026</pose>
       <link name="body">
         <collision name="envelope">
-          <pose>0 0 0.84 0 0 0</pose>
+          <pose>0 0 0.841312 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.3</radius>
-              <length>1.68</length>
+              <radius>0.51</radius>
+              <length>1.682624340057373</length>
             </cylinder>
           </geometry>
         </collision>
-        <visual name="leg_0">
-          <pose>0 -0.105 0.45 0 0 0</pose>
+        <visual name="worker_mesh">
           <geometry>
-            <cylinder>
-              <radius>0.09</radius>
-              <length>0.72</length>
-            </cylinder>
+            <mesh>
+              <uri>model://factory_worker/meshes/worker_tablet_review.obj</uri>
+            </mesh>
           </geometry>
-          <material>
-            <ambient>0.21 0.182 0.14 1</ambient>
-            <diffuse>0.3 0.26 0.2 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="shoe_0">
-          <pose>0.045 -0.105 0.075 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.27 0.15 0.15</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.063 0.0735 0.084 1</ambient>
-            <diffuse>0.09 0.105 0.12 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="leg_1">
-          <pose>0 0.105 0.45 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.09</radius>
-              <length>0.72</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.21 0.182 0.14 1</ambient>
-            <diffuse>0.3 0.26 0.2 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="shoe_1">
-          <pose>0.045 0.105 0.075 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.27 0.15 0.15</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.063 0.0735 0.084 1</ambient>
-            <diffuse>0.09 0.105 0.12 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="torso">
-          <pose>0 0 1.08 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.23 0.4 0.56</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.21 0.182 0.14 1</ambient>
-            <diffuse>0.3 0.26 0.2 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="vest">
-          <pose>0.012 0 1.12 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.245 0.415 0.43</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.644 0.441 0.07 1</ambient>
-            <diffuse>0.92 0.63 0.1 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="reflective">
-          <pose>0.022 0 1.08 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.25 0.42 0.055</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.546 0.574 0.546 1</ambient>
-            <diffuse>0.78 0.82 0.78 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="arm_0">
-          <pose>0 -0.245 1.07 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.055</radius>
-              <length>0.5</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.21 0.182 0.14 1</ambient>
-            <diffuse>0.3 0.26 0.2 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hand_0">
-          <pose>0 -0.245 0.8 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.055</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="arm_1">
-          <pose>0 0.245 1.07 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.055</radius>
-              <length>0.5</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.21 0.182 0.14 1</ambient>
-            <diffuse>0.3 0.26 0.2 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hand_1">
-          <pose>0 0.245 0.8 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.055</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="neck">
-          <pose>0 0 1.405 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.065</radius>
-              <length>0.1</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="head">
-          <pose>0 0 1.52 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.125</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hardhat">
-          <pose>0 0 1.647 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.14</radius>
-              <length>0.106</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.637 0.525 0.098 1</ambient>
-            <diffuse>0.91 0.75 0.14 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hat_brim">
-          <pose>0.025 0 1.606 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.158</radius>
-              <length>0.025</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.637 0.525 0.098 1</ambient>
-            <diffuse>0.91 0.75 0.14 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
+          <cast_shadows>true</cast_shadows>
         </visual>
       </link>
       <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
@@ -9745,218 +8775,24 @@
     </model>
     <model name="worker_06">
       <static>true</static>
-      <pose>-6 -11 0 0 0 0.00000000</pose>
+      <pose>-6 -11 0 0 0 -0.19739555984988075</pose>
       <link name="body">
         <collision name="envelope">
-          <pose>0 0 0.84 0 0 0</pose>
+          <pose>0 0 0.842679 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.3</radius>
-              <length>1.68</length>
+              <radius>0.51</radius>
+              <length>1.6853582859039307</length>
             </cylinder>
           </geometry>
         </collision>
-        <visual name="leg_0">
-          <pose>0 -0.105 0.45 0 0 0</pose>
+        <visual name="worker_mesh">
           <geometry>
-            <cylinder>
-              <radius>0.09</radius>
-              <length>0.72</length>
-            </cylinder>
+            <mesh>
+              <uri>model://factory_worker/meshes/worker_tablet_log.obj</uri>
+            </mesh>
           </geometry>
-          <material>
-            <ambient>0.084 0.175 0.252 1</ambient>
-            <diffuse>0.12 0.25 0.36 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="shoe_0">
-          <pose>0.045 -0.105 0.075 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.27 0.15 0.15</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.063 0.0735 0.084 1</ambient>
-            <diffuse>0.09 0.105 0.12 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="leg_1">
-          <pose>0 0.105 0.45 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.09</radius>
-              <length>0.72</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.084 0.175 0.252 1</ambient>
-            <diffuse>0.12 0.25 0.36 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="shoe_1">
-          <pose>0.045 0.105 0.075 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.27 0.15 0.15</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.063 0.0735 0.084 1</ambient>
-            <diffuse>0.09 0.105 0.12 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="torso">
-          <pose>0 0 1.08 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.23 0.4 0.56</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.084 0.175 0.252 1</ambient>
-            <diffuse>0.12 0.25 0.36 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="vest">
-          <pose>0.012 0 1.12 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.245 0.415 0.43</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.644 0.441 0.07 1</ambient>
-            <diffuse>0.92 0.63 0.1 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="reflective">
-          <pose>0.022 0 1.08 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.25 0.42 0.055</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.546 0.574 0.546 1</ambient>
-            <diffuse>0.78 0.82 0.78 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="arm_0">
-          <pose>0 -0.245 1.07 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.055</radius>
-              <length>0.5</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.084 0.175 0.252 1</ambient>
-            <diffuse>0.12 0.25 0.36 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hand_0">
-          <pose>0 -0.245 0.8 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.055</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="arm_1">
-          <pose>0 0.245 1.07 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.055</radius>
-              <length>0.5</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.084 0.175 0.252 1</ambient>
-            <diffuse>0.12 0.25 0.36 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hand_1">
-          <pose>0 0.245 0.8 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.055</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="neck">
-          <pose>0 0 1.405 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.065</radius>
-              <length>0.1</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="head">
-          <pose>0 0 1.52 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.125</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hardhat">
-          <pose>0 0 1.647 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.14</radius>
-              <length>0.106</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.637 0.525 0.098 1</ambient>
-            <diffuse>0.91 0.75 0.14 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hat_brim">
-          <pose>0.025 0 1.606 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.158</radius>
-              <length>0.025</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.637 0.525 0.098 1</ambient>
-            <diffuse>0.91 0.75 0.14 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
+          <cast_shadows>true</cast_shadows>
         </visual>
       </link>
       <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
@@ -9965,218 +8801,24 @@
     </model>
     <model name="worker_07">
       <static>true</static>
-      <pose>-5.5 -6.5 0 0 0 3.14159265</pose>
+      <pose>-5.5 -6.5 0 0 0 0.3708912888126625</pose>
       <link name="body">
         <collision name="envelope">
-          <pose>0 0 0.84 0 0 0</pose>
+          <pose>0 0 0.836443 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.3</radius>
-              <length>1.68</length>
+              <radius>0.42</radius>
+              <length>1.6728862524032593</length>
             </cylinder>
           </geometry>
         </collision>
-        <visual name="leg_0">
-          <pose>0 -0.105 0.45 0 0 0</pose>
+        <visual name="worker_mesh">
           <geometry>
-            <cylinder>
-              <radius>0.09</radius>
-              <length>0.72</length>
-            </cylinder>
+            <mesh>
+              <uri>model://factory_worker/meshes/worker_machine_inspect.obj</uri>
+            </mesh>
           </geometry>
-          <material>
-            <ambient>0.14 0.231 0.168 1</ambient>
-            <diffuse>0.2 0.33 0.24 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="shoe_0">
-          <pose>0.045 -0.105 0.075 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.27 0.15 0.15</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.063 0.0735 0.084 1</ambient>
-            <diffuse>0.09 0.105 0.12 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="leg_1">
-          <pose>0 0.105 0.45 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.09</radius>
-              <length>0.72</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.14 0.231 0.168 1</ambient>
-            <diffuse>0.2 0.33 0.24 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="shoe_1">
-          <pose>0.045 0.105 0.075 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.27 0.15 0.15</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.063 0.0735 0.084 1</ambient>
-            <diffuse>0.09 0.105 0.12 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="torso">
-          <pose>0 0 1.08 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.23 0.4 0.56</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.14 0.231 0.168 1</ambient>
-            <diffuse>0.2 0.33 0.24 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="vest">
-          <pose>0.012 0 1.12 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.245 0.415 0.43</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.644 0.441 0.07 1</ambient>
-            <diffuse>0.92 0.63 0.1 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="reflective">
-          <pose>0.022 0 1.08 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.25 0.42 0.055</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.546 0.574 0.546 1</ambient>
-            <diffuse>0.78 0.82 0.78 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="arm_0">
-          <pose>0 -0.245 1.07 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.055</radius>
-              <length>0.5</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.14 0.231 0.168 1</ambient>
-            <diffuse>0.2 0.33 0.24 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hand_0">
-          <pose>0 -0.245 0.8 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.055</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="arm_1">
-          <pose>0 0.245 1.07 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.055</radius>
-              <length>0.5</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.14 0.231 0.168 1</ambient>
-            <diffuse>0.2 0.33 0.24 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hand_1">
-          <pose>0 0.245 0.8 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.055</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="neck">
-          <pose>0 0 1.405 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.065</radius>
-              <length>0.1</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="head">
-          <pose>0 0 1.52 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.125</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hardhat">
-          <pose>0 0 1.647 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.14</radius>
-              <length>0.106</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.637 0.525 0.098 1</ambient>
-            <diffuse>0.91 0.75 0.14 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hat_brim">
-          <pose>0.025 0 1.606 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.158</radius>
-              <length>0.025</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.637 0.525 0.098 1</ambient>
-            <diffuse>0.91 0.75 0.14 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
+          <cast_shadows>true</cast_shadows>
         </visual>
       </link>
       <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
@@ -10185,218 +8827,24 @@
     </model>
     <model name="worker_08">
       <static>true</static>
-      <pose>4.5 -11 0 0 0 3.14159265</pose>
+      <pose>4.5 -11 0 0 0 -0.18822150530477094</pose>
       <link name="body">
         <collision name="envelope">
-          <pose>0 0 0.84 0 0 0</pose>
+          <pose>0 0 0.816475 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.3</radius>
-              <length>1.68</length>
+              <radius>0.49</radius>
+              <length>1.632950782775879</length>
             </cylinder>
           </geometry>
         </collision>
-        <visual name="leg_0">
-          <pose>0 -0.105 0.45 0 0 0</pose>
+        <visual name="worker_mesh">
           <geometry>
-            <cylinder>
-              <radius>0.09</radius>
-              <length>0.72</length>
-            </cylinder>
+            <mesh>
+              <uri>model://factory_worker/meshes/worker_low_inspect.obj</uri>
+            </mesh>
           </geometry>
-          <material>
-            <ambient>0.196 0.203 0.224 1</ambient>
-            <diffuse>0.28 0.29 0.32 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="shoe_0">
-          <pose>0.045 -0.105 0.075 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.27 0.15 0.15</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.063 0.0735 0.084 1</ambient>
-            <diffuse>0.09 0.105 0.12 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="leg_1">
-          <pose>0 0.105 0.45 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.09</radius>
-              <length>0.72</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.196 0.203 0.224 1</ambient>
-            <diffuse>0.28 0.29 0.32 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="shoe_1">
-          <pose>0.045 0.105 0.075 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.27 0.15 0.15</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.063 0.0735 0.084 1</ambient>
-            <diffuse>0.09 0.105 0.12 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="torso">
-          <pose>0 0 1.08 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.23 0.4 0.56</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.196 0.203 0.224 1</ambient>
-            <diffuse>0.28 0.29 0.32 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="vest">
-          <pose>0.012 0 1.12 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.245 0.415 0.43</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.644 0.441 0.07 1</ambient>
-            <diffuse>0.92 0.63 0.1 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="reflective">
-          <pose>0.022 0 1.08 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.25 0.42 0.055</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.546 0.574 0.546 1</ambient>
-            <diffuse>0.78 0.82 0.78 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="arm_0">
-          <pose>0 -0.245 1.07 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.055</radius>
-              <length>0.5</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.196 0.203 0.224 1</ambient>
-            <diffuse>0.28 0.29 0.32 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hand_0">
-          <pose>0 -0.245 0.8 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.055</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="arm_1">
-          <pose>0 0.245 1.07 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.055</radius>
-              <length>0.5</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.196 0.203 0.224 1</ambient>
-            <diffuse>0.28 0.29 0.32 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hand_1">
-          <pose>0 0.245 0.8 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.055</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="neck">
-          <pose>0 0 1.405 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.065</radius>
-              <length>0.1</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="head">
-          <pose>0 0 1.52 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.125</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hardhat">
-          <pose>0 0 1.647 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.14</radius>
-              <length>0.106</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.637 0.525 0.098 1</ambient>
-            <diffuse>0.91 0.75 0.14 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hat_brim">
-          <pose>0.025 0 1.606 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.158</radius>
-              <length>0.025</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.637 0.525 0.098 1</ambient>
-            <diffuse>0.91 0.75 0.14 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
+          <cast_shadows>true</cast_shadows>
         </visual>
       </link>
       <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
@@ -10405,218 +8853,24 @@
     </model>
     <model name="worker_09">
       <static>true</static>
-      <pose>8 -6.5 0 0 0 3.14159265</pose>
+      <pose>8 -6.5 0 0 0 2.8577985443814655</pose>
       <link name="body">
         <collision name="envelope">
-          <pose>0 0 0.84 0 0 0</pose>
+          <pose>0 0 0.816475 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.3</radius>
-              <length>1.68</length>
+              <radius>0.49</radius>
+              <length>1.632950782775879</length>
             </cylinder>
           </geometry>
         </collision>
-        <visual name="leg_0">
-          <pose>0 -0.105 0.45 0 0 0</pose>
+        <visual name="worker_mesh">
           <geometry>
-            <cylinder>
-              <radius>0.09</radius>
-              <length>0.72</length>
-            </cylinder>
+            <mesh>
+              <uri>model://factory_worker/meshes/worker_low_inspect.obj</uri>
+            </mesh>
           </geometry>
-          <material>
-            <ambient>0.105 0.21 0.252 1</ambient>
-            <diffuse>0.15 0.3 0.36 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="shoe_0">
-          <pose>0.045 -0.105 0.075 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.27 0.15 0.15</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.063 0.0735 0.084 1</ambient>
-            <diffuse>0.09 0.105 0.12 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="leg_1">
-          <pose>0 0.105 0.45 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.09</radius>
-              <length>0.72</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.105 0.21 0.252 1</ambient>
-            <diffuse>0.15 0.3 0.36 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="shoe_1">
-          <pose>0.045 0.105 0.075 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.27 0.15 0.15</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.063 0.0735 0.084 1</ambient>
-            <diffuse>0.09 0.105 0.12 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="torso">
-          <pose>0 0 1.08 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.23 0.4 0.56</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.105 0.21 0.252 1</ambient>
-            <diffuse>0.15 0.3 0.36 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="vest">
-          <pose>0.012 0 1.12 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.245 0.415 0.43</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.644 0.441 0.07 1</ambient>
-            <diffuse>0.92 0.63 0.1 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="reflective">
-          <pose>0.022 0 1.08 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.25 0.42 0.055</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.546 0.574 0.546 1</ambient>
-            <diffuse>0.78 0.82 0.78 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="arm_0">
-          <pose>0 -0.245 1.07 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.055</radius>
-              <length>0.5</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.105 0.21 0.252 1</ambient>
-            <diffuse>0.15 0.3 0.36 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hand_0">
-          <pose>0 -0.245 0.8 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.055</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="arm_1">
-          <pose>0 0.245 1.07 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.055</radius>
-              <length>0.5</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.105 0.21 0.252 1</ambient>
-            <diffuse>0.15 0.3 0.36 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hand_1">
-          <pose>0 0.245 0.8 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.055</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="neck">
-          <pose>0 0 1.405 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.065</radius>
-              <length>0.1</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="head">
-          <pose>0 0 1.52 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.125</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hardhat">
-          <pose>0 0 1.647 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.14</radius>
-              <length>0.106</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.637 0.525 0.098 1</ambient>
-            <diffuse>0.91 0.75 0.14 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hat_brim">
-          <pose>0.025 0 1.606 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.158</radius>
-              <length>0.025</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.637 0.525 0.098 1</ambient>
-            <diffuse>0.91 0.75 0.14 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
+          <cast_shadows>true</cast_shadows>
         </visual>
       </link>
       <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
@@ -10625,218 +8879,24 @@
     </model>
     <model name="worker_10">
       <static>true</static>
-      <pose>9 -12 0 0 0 1.57079633</pose>
+      <pose>9 -12 0 0 0 0.4475199751571696</pose>
       <link name="body">
         <collision name="envelope">
-          <pose>0 0 0.84 0 0 0</pose>
+          <pose>0 0 0.841312 0 0 0</pose>
           <geometry>
             <cylinder>
-              <radius>0.3</radius>
-              <length>1.68</length>
+              <radius>0.51</radius>
+              <length>1.682624340057373</length>
             </cylinder>
           </geometry>
         </collision>
-        <visual name="leg_0">
-          <pose>0 -0.105 0.45 0 0 0</pose>
+        <visual name="worker_mesh">
           <geometry>
-            <cylinder>
-              <radius>0.09</radius>
-              <length>0.72</length>
-            </cylinder>
+            <mesh>
+              <uri>model://factory_worker/meshes/worker_tablet_review.obj</uri>
+            </mesh>
           </geometry>
-          <material>
-            <ambient>0.21 0.182 0.14 1</ambient>
-            <diffuse>0.3 0.26 0.2 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="shoe_0">
-          <pose>0.045 -0.105 0.075 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.27 0.15 0.15</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.063 0.0735 0.084 1</ambient>
-            <diffuse>0.09 0.105 0.12 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="leg_1">
-          <pose>0 0.105 0.45 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.09</radius>
-              <length>0.72</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.21 0.182 0.14 1</ambient>
-            <diffuse>0.3 0.26 0.2 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="shoe_1">
-          <pose>0.045 0.105 0.075 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.27 0.15 0.15</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.063 0.0735 0.084 1</ambient>
-            <diffuse>0.09 0.105 0.12 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="torso">
-          <pose>0 0 1.08 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.23 0.4 0.56</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.21 0.182 0.14 1</ambient>
-            <diffuse>0.3 0.26 0.2 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="vest">
-          <pose>0.012 0 1.12 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.245 0.415 0.43</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.644 0.441 0.07 1</ambient>
-            <diffuse>0.92 0.63 0.1 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="reflective">
-          <pose>0.022 0 1.08 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.25 0.42 0.055</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.546 0.574 0.546 1</ambient>
-            <diffuse>0.78 0.82 0.78 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="arm_0">
-          <pose>0 -0.245 1.07 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.055</radius>
-              <length>0.5</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.21 0.182 0.14 1</ambient>
-            <diffuse>0.3 0.26 0.2 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hand_0">
-          <pose>0 -0.245 0.8 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.055</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="arm_1">
-          <pose>0 0.245 1.07 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.055</radius>
-              <length>0.5</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.21 0.182 0.14 1</ambient>
-            <diffuse>0.3 0.26 0.2 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hand_1">
-          <pose>0 0.245 0.8 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.055</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="neck">
-          <pose>0 0 1.405 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.065</radius>
-              <length>0.1</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="head">
-          <pose>0 0 1.52 0 0 0</pose>
-          <geometry>
-            <sphere>
-              <radius>0.125</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.469 0.315 0.238 1</ambient>
-            <diffuse>0.67 0.45 0.34 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hardhat">
-          <pose>0 0 1.647 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.14</radius>
-              <length>0.106</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.637 0.525 0.098 1</ambient>
-            <diffuse>0.91 0.75 0.14 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
-        </visual>
-        <visual name="hat_brim">
-          <pose>0.025 0 1.606 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.158</radius>
-              <length>0.025</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0.637 0.525 0.098 1</ambient>
-            <diffuse>0.91 0.75 0.14 1</diffuse>
-            <specular>.05 .05 .05 1</specular>
-          </material>
+          <cast_shadows>true</cast_shadows>
         </visual>
       </link>
       <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">

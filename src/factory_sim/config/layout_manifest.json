@@ -1,5 +1,5 @@
 {
-  "schema": "factory_roof_workers_v1",
+  "schema": "factory_textured_workers_v2",
   "world_bounds_xy_m": [
     -15,
     15,
@@ -660,120 +660,120 @@
     {
       "name": "worker_01",
       "bounds_xy": [
-        -7.3,
-        -6.7,
-        4.2,
-        4.8
+        -7.5,
+        -6.5,
+        4.0,
+        5.0
       ],
-      "height_m": 1.7,
+      "height_m": 1.7082867622375488,
       "semantic_target_id": 4,
       "collision_is_conservative_envelope": true
     },
     {
       "name": "worker_02",
       "bounds_xy": [
-        -6.3,
-        -5.7,
-        12.2,
-        12.8
+        -6.31,
+        -5.69,
+        12.19,
+        12.81
       ],
-      "height_m": 1.7,
+      "height_m": 1.711749792098999,
       "semantic_target_id": 4,
       "collision_is_conservative_envelope": true
     },
     {
       "name": "worker_03",
       "bounds_xy": [
-        5.7,
-        6.3,
-        8.2,
-        8.8
+        5.58,
+        6.42,
+        8.08,
+        8.92
       ],
-      "height_m": 1.7,
+      "height_m": 1.6728862524032593,
       "semantic_target_id": 4,
       "collision_is_conservative_envelope": true
     },
     {
       "name": "worker_04",
       "bounds_xy": [
-        11.7,
-        12.3,
-        7.2,
-        7.8
+        11.49,
+        12.51,
+        6.99,
+        8.01
       ],
-      "height_m": 1.7,
+      "height_m": 1.6853582859039307,
       "semantic_target_id": 4,
       "collision_is_conservative_envelope": true
     },
     {
       "name": "worker_05",
       "bounds_xy": [
-        -9.3,
-        -8.7,
-        -11.3,
-        -10.7
+        -9.51,
+        -8.49,
+        -11.51,
+        -10.49
       ],
-      "height_m": 1.7,
+      "height_m": 1.682624340057373,
       "semantic_target_id": 4,
       "collision_is_conservative_envelope": true
     },
     {
       "name": "worker_06",
       "bounds_xy": [
-        -6.3,
-        -5.7,
-        -11.3,
-        -10.7
+        -6.51,
+        -5.49,
+        -11.51,
+        -10.49
       ],
-      "height_m": 1.7,
+      "height_m": 1.6853582859039307,
       "semantic_target_id": 4,
       "collision_is_conservative_envelope": true
     },
     {
       "name": "worker_07",
       "bounds_xy": [
-        -5.8,
-        -5.2,
-        -6.8,
-        -6.2
+        -5.92,
+        -5.08,
+        -6.92,
+        -6.08
       ],
-      "height_m": 1.7,
+      "height_m": 1.6728862524032593,
       "semantic_target_id": 4,
       "collision_is_conservative_envelope": true
     },
     {
       "name": "worker_08",
       "bounds_xy": [
-        4.2,
-        4.8,
-        -11.3,
-        -10.7
+        4.01,
+        4.99,
+        -11.49,
+        -10.51
       ],
-      "height_m": 1.7,
+      "height_m": 1.632950782775879,
       "semantic_target_id": 4,
       "collision_is_conservative_envelope": true
     },
     {
       "name": "worker_09",
       "bounds_xy": [
-        7.7,
-        8.3,
-        -6.8,
-        -6.2
+        7.51,
+        8.49,
+        -6.99,
+        -6.01
       ],
-      "height_m": 1.7,
+      "height_m": 1.632950782775879,
       "semantic_target_id": 4,
       "collision_is_conservative_envelope": true
     },
     {
       "name": "worker_10",
       "bounds_xy": [
-        8.7,
-        9.3,
-        -12.3,
-        -11.7
+        8.49,
+        9.51,
+        -12.51,
+        -11.49
       ],
-      "height_m": 1.7,
+      "height_m": 1.682624340057373,
       "semantic_target_id": 4,
       "collision_is_conservative_envelope": true
     },
@@ -819,11 +819,27 @@
         -7,
         4.5
       ],
-      "yaw_rad": 0,
+      "yaw_rad": 2.8198420991931505,
       "primary_patrol_point": "02",
-      "height_m": 1.7,
-      "collision_radius_m": 0.3,
-      "model": "static procedural safety-clothing mannequin"
+      "height_m": 1.7082867622375488,
+      "collision_radius_m": 0.5,
+      "model": "O3DE Human Worker textured static mesh",
+      "pose": "shelf_check",
+      "activity": "检查货架货物",
+      "look_at_xy_m": [
+        -8.2,
+        4.9
+      ],
+      "mesh_uri": "model://factory_worker/meshes/worker_shelf_check.obj",
+      "route_corridor_margin_m": 0.5250000000000004,
+      "route_edge_clearance_m": 1.5250000000000004,
+      "visual_bounds_xy": [
+        -7.422832889357604,
+        -6.841231525515926,
+        4.247608184425683,
+        4.891020692324076
+      ],
+      "triangles": 35146
     },
     {
       "name": "worker_02",
@@ -831,11 +847,27 @@
         -6,
         12.5
       ],
-      "yaw_rad": 0,
+      "yaw_rad": -2.875340604438868,
       "primary_patrol_point": "07",
-      "height_m": 1.7,
-      "collision_radius_m": 0.3,
-      "model": "static procedural safety-clothing mannequin"
+      "height_m": 1.711749792098999,
+      "collision_radius_m": 0.31,
+      "model": "O3DE Human Worker textured static mesh",
+      "pose": "shelf_observe",
+      "activity": "查看上层货架",
+      "look_at_xy_m": [
+        -10.4,
+        11.3
+      ],
+      "mesh_uri": "model://factory_worker/meshes/worker_shelf_observe.obj",
+      "route_corridor_margin_m": 1.4650000000000003,
+      "route_edge_clearance_m": 2.4650000000000003,
+      "visual_bounds_xy": [
+        -6.206910177860997,
+        -5.8446780240114355,
+        12.260958889307492,
+        12.785417307579406
+      ],
+      "triangles": 35146
     },
     {
       "name": "worker_03",
@@ -843,11 +875,27 @@
         6,
         8.5
       ],
-      "yaw_rad": 0,
+      "yaw_rad": 0.7853981633974483,
       "primary_patrol_point": "17",
-      "height_m": 1.7,
-      "collision_radius_m": 0.3,
-      "model": "static procedural safety-clothing mannequin"
+      "height_m": 1.6728862524032593,
+      "collision_radius_m": 0.42,
+      "model": "O3DE Human Worker textured static mesh",
+      "pose": "machine_inspect",
+      "activity": "观察数控设备",
+      "look_at_xy_m": [
+        7.1,
+        9.6
+      ],
+      "mesh_uri": "model://factory_worker/meshes/worker_machine_inspect.obj",
+      "route_corridor_margin_m": 0.5800000000000001,
+      "route_edge_clearance_m": 1.58,
+      "visual_bounds_xy": [
+        5.812980155871095,
+        6.357303177853906,
+        8.291586640206296,
+        8.771518397373917
+      ],
+      "triangles": 35146
     },
     {
       "name": "worker_04",
@@ -855,11 +903,27 @@
         12,
         7.5
       ],
-      "yaw_rad": 3.141592653589793,
+      "yaw_rad": 1.4840579881189118,
       "primary_patrol_point": "14",
-      "height_m": 1.7,
-      "collision_radius_m": 0.3,
-      "model": "static procedural safety-clothing mannequin"
+      "height_m": 1.6853582859039307,
+      "collision_radius_m": 0.51,
+      "model": "O3DE Human Worker textured static mesh",
+      "pose": "tablet_log",
+      "activity": "记录生产设备巡查",
+      "look_at_xy_m": [
+        12.2,
+        9.8
+      ],
+      "mesh_uri": "model://factory_worker/meshes/worker_tablet_log.obj",
+      "route_corridor_margin_m": 0.4399999999999993,
+      "route_edge_clearance_m": 1.4399999999999993,
+      "visual_bounds_xy": [
+        11.76627844950983,
+        12.341218552159784,
+        7.35080192664161,
+        7.94449595516069
+      ],
+      "triangles": 35286
     },
     {
       "name": "worker_05",
@@ -867,11 +931,27 @@
         -9,
         -11
       ],
-      "yaw_rad": 0,
+      "yaw_rad": -2.936197264400026,
       "primary_patrol_point": "23",
-      "height_m": 1.7,
-      "collision_radius_m": 0.3,
-      "model": "static procedural safety-clothing mannequin"
+      "height_m": 1.682624340057373,
+      "collision_radius_m": 0.51,
+      "model": "O3DE Human Worker textured static mesh",
+      "pose": "tablet_review",
+      "activity": "查看工作台任务单",
+      "look_at_xy_m": [
+        -11.4,
+        -11.5
+      ],
+      "mesh_uri": "model://factory_worker/meshes/worker_tablet_review.obj",
+      "route_corridor_margin_m": 0.49,
+      "route_edge_clearance_m": 1.49,
+      "visual_bounds_xy": [
+        -9.469878376701901,
+        -8.850902057100129,
+        -11.241784627354264,
+        -10.692919540564331
+      ],
+      "triangles": 35286
     },
     {
       "name": "worker_06",
@@ -879,11 +959,27 @@
         -6,
         -11
       ],
-      "yaw_rad": 0,
+      "yaw_rad": -0.19739555984988075,
       "primary_patrol_point": "22",
-      "height_m": 1.7,
-      "collision_radius_m": 0.3,
-      "model": "static procedural safety-clothing mannequin"
+      "height_m": 1.6853582859039307,
+      "collision_radius_m": 0.51,
+      "model": "O3DE Human Worker textured static mesh",
+      "pose": "tablet_log",
+      "activity": "核对工具柜检修记录",
+      "look_at_xy_m": [
+        -3.5,
+        -11.5
+      ],
+      "mesh_uri": "model://factory_worker/meshes/worker_tablet_log.obj",
+      "route_corridor_margin_m": 0.49,
+      "route_edge_clearance_m": 1.49,
+      "visual_bounds_xy": [
+        -6.153038637706676,
+        -5.576414839315226,
+        -11.378265271364096,
+        -10.76770612529674
+      ],
+      "triangles": 35286
     },
     {
       "name": "worker_07",
@@ -891,11 +987,27 @@
         -5.5,
         -6.5
       ],
-      "yaw_rad": 3.141592653589793,
+      "yaw_rad": 0.3708912888126625,
       "primary_patrol_point": "24",
-      "height_m": 1.7,
-      "collision_radius_m": 0.3,
-      "model": "static procedural safety-clothing mannequin"
+      "height_m": 1.6728862524032593,
+      "collision_radius_m": 0.42,
+      "model": "O3DE Human Worker textured static mesh",
+      "pose": "machine_inspect",
+      "activity": "查看托盘物料",
+      "look_at_xy_m": [
+        -3.7,
+        -5.8
+      ],
+      "mesh_uri": "model://factory_worker/meshes/worker_machine_inspect.obj",
+      "route_corridor_margin_m": 1.08,
+      "route_edge_clearance_m": 2.08,
+      "visual_bounds_xy": [
+        -5.664629046290868,
+        -5.101928481611833,
+        -6.809165676982462,
+        -6.244333203395314
+      ],
+      "triangles": 35146
     },
     {
       "name": "worker_08",
@@ -903,11 +1015,27 @@
         4.5,
         -11
       ],
-      "yaw_rad": 3.141592653589793,
+      "yaw_rad": -0.18822150530477094,
       "primary_patrol_point": "26",
-      "height_m": 1.7,
-      "collision_radius_m": 0.3,
-      "model": "static procedural safety-clothing mannequin"
+      "height_m": 1.632950782775879,
+      "collision_radius_m": 0.49,
+      "model": "O3DE Human Worker textured static mesh",
+      "pose": "low_inspect",
+      "activity": "俯身查看水泵",
+      "look_at_xy_m": [
+        6.6,
+        -11.4
+      ],
+      "mesh_uri": "model://factory_worker/meshes/worker_low_inspect.obj",
+      "route_corridor_margin_m": 0.51,
+      "route_edge_clearance_m": 1.51,
+      "visual_bounds_xy": [
+        4.347205843149947,
+        4.929933571442349,
+        -11.32021823519181,
+        -10.764979287003607
+      ],
+      "triangles": 35146
     },
     {
       "name": "worker_09",
@@ -915,11 +1043,27 @@
         8,
         -6.5
       ],
-      "yaw_rad": 3.141592653589793,
+      "yaw_rad": 2.8577985443814655,
       "primary_patrol_point": "27",
-      "height_m": 1.7,
-      "collision_radius_m": 0.3,
-      "model": "static procedural safety-clothing mannequin"
+      "height_m": 1.632950782775879,
+      "collision_radius_m": 0.49,
+      "model": "O3DE Human Worker textured static mesh",
+      "pose": "low_inspect",
+      "activity": "俯身查看泵撬",
+      "look_at_xy_m": [
+        5.6,
+        -5.8
+      ],
+      "mesh_uri": "model://factory_worker/meshes/worker_low_inspect.obj",
+      "route_corridor_margin_m": 1.0099999999999998,
+      "route_edge_clearance_m": 2.01,
+      "visual_bounds_xy": [
+        7.58047696,
+        8.15629816,
+        -6.72485804,
+        -6.16803068
+      ],
+      "triangles": 35146
     },
     {
       "name": "worker_10",
@@ -927,11 +1071,27 @@
         9,
         -12
       ],
-      "yaw_rad": 1.5707963267948966,
+      "yaw_rad": 0.4475199751571696,
       "primary_patrol_point": "28",
-      "height_m": 1.7,
-      "collision_radius_m": 0.3,
-      "model": "static procedural safety-clothing mannequin"
+      "height_m": 1.682624340057373,
+      "collision_radius_m": 0.51,
+      "model": "O3DE Human Worker textured static mesh",
+      "pose": "tablet_review",
+      "activity": "记录公用设备状态",
+      "look_at_xy_m": [
+        11.5,
+        -10.8
+      ],
+      "mesh_uri": "model://factory_worker/meshes/worker_tablet_review.obj",
+      "route_corridor_margin_m": 1.4900000000000002,
+      "route_edge_clearance_m": 2.49,
+      "visual_bounds_xy": [
+        8.822057487099679,
+        9.493346448851465,
+        -12.273403238835977,
+        -11.75174160955186
+      ],
+      "triangles": 35286
     }
   ]
 }

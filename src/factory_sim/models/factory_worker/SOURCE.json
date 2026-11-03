@@ -1,0 +1,108 @@
+{
+  "repository": "https://github.com/RobotecAI/o3de-humanworker-gem",
+  "commit": "3de9db12d3bb97683fd8be6eee802d71f5cc8508",
+  "asset": "Assets/HumanWorker/Meshes/Model.fbx",
+  "license": "Apache-2.0 OR MIT",
+  "adaptations": [
+    "Static upper-body skeletal posing; no runtime animation",
+    "Meters, Z up, facing +X, feet on z=0",
+    "Shared base-color textures resized to at most 1024 px",
+    "OBJ/MTL exported with preserved UVs and normals",
+    "Tablet removed from non-tablet postures"
+  ],
+  "poses": {
+    "shelf_check": {
+      "bounds_min": [
+        -0.14587120711803436,
+        -0.35868602991104126,
+        0.0
+      ],
+      "bounds_max": [
+        0.4606844484806061,
+        0.2526991665363312,
+        1.7082867622375488
+      ],
+      "triangles": 35146,
+      "vertices": 19771,
+      "horizontal_radius_m": 0.4802394841552189
+    },
+    "shelf_observe": {
+      "bounds_min": [
+        -0.14587120711803436,
+        -0.2936473488807678,
+        0.0
+      ],
+      "bounds_max": [
+        0.16694198548793793,
+        0.2526991665363312,
+        1.711749792098999
+      ],
+      "triangles": 35146,
+      "vertices": 19771,
+      "horizontal_radius_m": 0.293677857466396
+    },
+    "tablet_log": {
+      "bounds_min": [
+        -0.14587120711803436,
+        -0.3363296389579773,
+        0.0
+      ],
+      "bounds_max": [
+        0.45717817544937134,
+        0.2360069900751114,
+        1.6853582859039307
+      ],
+      "triangles": 35286,
+      "vertices": 19835,
+      "horizontal_radius_m": 0.4989319183859873
+    },
+    "machine_inspect": {
+      "bounds_min": [
+        -0.14589975774288177,
+        -0.3695501387119293,
+        0.0
+      ],
+      "bounds_max": [
+        0.385890930891037,
+        0.25228554010391235,
+        1.6728862524032593
+      ],
+      "triangles": 35146,
+      "vertices": 19771,
+      "horizontal_radius_m": 0.40018480110960025
+    },
+    "low_inspect": {
+      "bounds_min": [
+        -0.14593076705932617,
+        -0.2905060946941376,
+        0.0
+      ],
+      "bounds_max": [
+        0.4389064610004425,
+        0.25621718168258667,
+        1.632950782775879
+      ],
+      "triangles": 35146,
+      "vertices": 19771,
+      "horizontal_radius_m": 0.4717228356777723
+    },
+    "tablet_review": {
+      "bounds_min": [
+        -0.14587120711803436,
+        -0.3270949423313141,
+        0.0
+      ],
+      "bounds_max": [
+        0.46587422490119934,
+        0.23705029487609863,
+        1.682624340057373
+      ],
+      "triangles": 35286,
+      "vertices": 19835,
+      "horizontal_radius_m": 0.4947973783857976
+    }
+  },
+  "semantic_target_id": 4,
+  "gazebo_label": 5,
+  "source_fbx_sha256": "b96ee52a515883436c8b3295f9f06bb947400a2edd9895f4c36bae80324e5749"
+}

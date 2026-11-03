@@ -1,0 +1,57 @@
+name: fusion-traversability-inference
+services:
+  inference:
+    image: fusion_traversability_stitchfusion:latest
+    build:
+      context: ../..
+      dockerfile: config/docker/Dockerfile.stitchfusion
+      network: none
+    init: true
+    shm_size: 256mb
+    mem_limit: 3g
+    mem_reservation: 1g
+    memswap_limit: 3g
+    cpus: 4.0
+    ports:
+      - "127.0.0.1:${CMNEXT_PORT:-8765}:8765"
+    volumes:
+      - type: bind
+        source: ../../src/perception
+        target: /app/src/perception
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ../../src/third_party/stitchfusion
+        target: /opt/stitchfusion
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ../../models/stitchfusion
+        target: /app/models/stitchfusion
+        read_only: true
+        bind:
+          create_host_path: false
+    environment:
+      NVIDIA_DRIVER_CAPABILITIES: compute,utility
+      PYTHONPATH: /app/src:/opt/stitchfusion:/opt/model-libs
+      MALLOC_ARENA_MAX: 2
+      MALLOC_TRIM_THRESHOLD_: 131072
+      PYTORCH_KERNEL_CACHE_PATH: /tmp/stitch-kernel-cache
+      OMP_NUM_THREADS: 1
+      MKL_NUM_THREADS: 1
+    deploy:
+      resources:
+        reservations:
+          memory: 1g
+          devices:
+            - driver: nvidia
+              device_ids: ["${GPU_DEVICE_ID:-0}"]
+              capabilities: [gpu]
+    command: ["python3", "-m", "perception.services.server", "--short-side", "${CMNEXT_SHORT_SIDE:-376}"]
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

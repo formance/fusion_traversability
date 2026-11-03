@@ -24,6 +24,31 @@ while(-not $stopTask.IsCompleted){
 }
 """
 
+def sample_process_tree(root_pid=None, proc_root=Path('/proc')):
+    """Attribute session memory without recording command lines or other apps.
+
+    RSS includes shared mappings; keep per-process figures instead of summing
+    them as if they were the session's physical memory consumption.
+    """
+    pending=[os.getpid() if root_pid is None else root_pid]
+    seen=set();rows=[]
+    while pending:
+        pid=pending.pop()
+        if pid in seen:continue
+        seen.add(pid);directory=proc_root/str(pid)
+        try:
+            pending.extend(map(int,(directory/'task'/str(pid)/'children').read_text().split()))
+            fields={line.split(':',1)[0]:line.split(':',1)[1].strip()
+                    for line in (directory/'status').read_text().splitlines() if ':' in line}
+            row={'pid':pid,'name':fields['Name']}
+            for source,target in (('VmRSS','rss_gib'),('RssAnon','anonymous_gib'),('VmSwap','swap_gib')):
+                row[target]=int(fields.get(source,'0 kB').split()[0])/2**20
+            rows.append(row)
+        except (OSError,ValueError,KeyError):
+            # Processes may exit between reading children and status.
+            continue
+    return rows
+
 class PressurePolicy:
     def __init__(self, config):
         self.config=config
@@ -95,6 +120,7 @@ class ResourceMonitor:
             a=list(map(float,query.stdout.strip().split(',')))
             values.update(gpu_util_percent=a[0],gpu_used_gib=a[1]/1024,gpu_total_gib=a[2]/1024,gpu_free_gib=(a[2]-a[1])/1024,gpu_temperature_c=a[3]);self.gpu_last_good=time.monotonic()
         except (OSError,ValueError,subprocess.TimeoutExpired):values['gpu_sample_missing']=True
+        values['session_processes']=sample_process_tree()
         return values
 
     def save(self, row):

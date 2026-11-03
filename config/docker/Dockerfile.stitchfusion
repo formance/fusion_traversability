@@ -1,0 +1,6 @@
+FROM ubuntu24.04_py312_torch271_cu126:latest
+WORKDIR /opt/stitchfusion
+COPY src/third_party/stitchfusion/ /opt/stitchfusion/
+COPY src/perception/ /app/src/perception/
+ENV PYTHONPATH=/app/src:/opt/stitchfusion:/opt/model-libs PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NVIDIA_DRIVER_CAPABILITIES=compute,utility
+CMD ["python3", "-m", "perception.services.server"]

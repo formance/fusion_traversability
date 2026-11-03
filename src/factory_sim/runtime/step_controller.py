@@ -179,7 +179,9 @@ def main():
     try:rclpy.spin(node)
     except KeyboardInterrupt:pass
     finally:
-        node.zero();node.destroy_node()
+        # SIGINT may already have shut down ROS before this cleanup runs.
+        if rclpy.ok(context=node.context):node.zero()
+        node.destroy_node()
         if rclpy.ok():rclpy.shutdown()
 
 if __name__=='__main__':main()

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.9">
+  <model name="factory_worker">
+    <static>true</static>
+    <link name="body">
+      <visual name="worker_mesh">
+        <geometry>
+          <mesh>
+            <uri>model://factory_worker/meshes/worker_tablet_review.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="envelope">
+        <pose>0 0 0.85 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.51</radius>
+            <length>1.7</length>
+          </cylinder>
+        </geometry>
+      </collision>
+    </link>
+    <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+      <label>5</label>
+    </plugin>
+  </model>
+</sdf>

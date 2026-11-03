@@ -1,6 +1,6 @@
 {
   "enabled": true,
-  "purpose": "Engineering surface appearance defaults, not measured real-factory materials; no texture assets downloaded",
+  "purpose": "Engineering factory surface defaults with textured human meshes",
   "profiles": {
     "concrete": {
       "color": [
@@ -149,15 +149,18 @@
     0,
     1.5707963267948966
   ],
-  "appearance_note": "Diffuse contrasting industrial palette; engineering approximations, not calibrated photorealism. No extra fill lights or downloaded textures.",
+  "appearance_note": "Industrial palette with textured worker meshes; not calibrated photorealism",
   "roof": {
     "bottom_m": 4.8,
     "top_m": 5.0,
     "source": "procedural",
-    "note": "Scene ambient raised to 0.65 to compensate for roof shading; no point fill lights, avoiding previously observed ground light tiles."
+    "note": "Scene ambient raised to 0.65 to compensate for roof shading; no point fill lights, avoiding previously observed ground light tiles.",
+    "gui_view": "transparent via /gui/view/transparent on each launch; sensor rendering and collisions remain opaque"
   },
   "workers": {
     "count": 10,
-    "appearance": "procedural static figures with workwear and helmets; not photorealistic"
+    "appearance": "Textured O3DE HumanWorker mesh; six baked static postures matched to nearby equipment",
+    "textures": "Shared base-color maps, maximum 1024 px",
+    "pose_config": "src/factory_sim/config/workers.json"
   }
 }

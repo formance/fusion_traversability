@@ -1,0 +1,91 @@
+{
+  "taxonomy": "factory_inspection_11",
+  "classes": [
+    "地面/地板",
+    "天空/天花板",
+    "墙体/围栏/立柱",
+    "固定设备",
+    "人",
+    "车辆",
+    "积水",
+    "坑洞",
+    "玻璃",
+    "其他障碍物",
+    "未知"
+  ],
+  "class_names_en": [
+    "ground_floor",
+    "sky_ceiling",
+    "wall_fence_column",
+    "fixed_equipment",
+    "person",
+    "vehicle",
+    "water",
+    "pothole",
+    "glass",
+    "other_obstacle",
+    "unknown"
+  ],
+  "palette": [
+    [
+      128,
+      64,
+      128
+    ],
+    [
+      70,
+      130,
+      180
+    ],
+    [
+      110,
+      110,
+      110
+    ],
+    [
+      0,
+      170,
+      150
+    ],
+    [
+      220,
+      20,
+      60
+    ],
+    [
+      0,
+      80,
+      200
+    ],
+    [
+      0,
+      170,
+      255
+    ],
+    [
+      100,
+      65,
+      30
+    ],
+    [
+      160,
+      100,
+      230
+    ],
+    [
+      255,
+      140,
+      0
+    ],
+    [
+      0,
+      0,
+      0
+    ]
+  ],
+  "unavailable_from_source": [
+    7,
+    8
+  ],
+  "unknown_id": 10
+}

@@ -1,8 +1,14 @@
 **
 !src/
-!src/cmnext_inference/
-!src/cmnext_inference/**
+!src/perception/
+!src/perception/**
+!src/third_party/
+!src/third_party/cmnext/
+!src/third_party/cmnext/**
+!src/third_party/stitchfusion/
+!src/third_party/stitchfusion/**
 !docker/
 !docker/Dockerfile.cmnext
+!docker/Dockerfile.stitchfusion
 **/__pycache__/
 **/*.pyc

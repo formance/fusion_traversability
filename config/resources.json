@@ -4,7 +4,7 @@
   "limits": {
     "host_available_gib": {
       "warn_below": 6.0,
-      "stop_below": 4.0,
+      "stop_below": 2.0,
       "duration_s": 4.0
     },
     "wsl_available_gib": {

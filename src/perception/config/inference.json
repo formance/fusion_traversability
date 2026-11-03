@@ -1,0 +1,132 @@
+{
+  "model": "StitchFusion",
+  "backbone": "StitchFusion-B2",
+  "modalities": [
+    "img",
+    "lidar"
+  ],
+  "checkpoint_path": "models/stitchfusion/deliver_rgbl.pth",
+  "number_of_classes": 11,
+  "deployment": "docker_http_worker",
+  "container_image": "fusion_traversability_stitchfusion:latest",
+  "endpoint": "http://127.0.0.1:8765",
+  "device": "cuda",
+  "batch_size": 1,
+  "model_input": {
+    "short_side": 376,
+    "resize_mode": "two_stage_bilinear_uint8_align_multiple_32",
+    "keep_aspect_ratio": true,
+    "align_to_multiple": 32,
+    "rgb_normalization": "ImageNet",
+    "lidar_normalization": "divide_by_255_only",
+    "preprocessing_device": "cuda",
+    "checkpoint_load_device": "cuda",
+    "precision": "float32"
+  },
+  "synchronization": {
+    "input_pair_queue_size": 2,
+    "slop_s": 0.05,
+    "max_input_age_s": 0.5,
+    "max_result_age_s": 3.0,
+    "motion_compensation": true,
+    "fixed_frame": "odom",
+    "pending_queue_size": 1,
+    "sensor_queue_depth": 1
+  },
+  "lidar_encoding": {
+    "name": "projected_camera_log_depth_turbo",
+    "status": "experimental_not_official_preprocessing",
+    "max_depth_m": 120.0,
+    "dilation_pixels": 3,
+    "missing_pixel_rgb": [
+      0,
+      0,
+      0
+    ],
+    "formula": "round(255*clip(1-log1p(z_camera)/log1p(max_depth),0,1)); OpenCV TURBO converted to RGB",
+    "official_conversion_available": false,
+    "allow_rgb_only_fallback": false,
+    "source": "https://github.com/InSAI-Lab/DELIVER/issues/9#issuecomment-1737047710"
+  },
+  "output": {
+    "labels_topic": "/perception/labels",
+    "color_topic": "/perception/semantic_color",
+    "status_topic": "/perception/status",
+    "overlay_alpha": 0.55,
+    "restore_original_size": true,
+    "labels_encoding": "mono8",
+    "default_save_every": 0,
+    "viewer_panels": [
+      "raw_rgb",
+      "raw_lidar_3d",
+      "full_frame_aligned_lidar",
+      "full_frame_semantic_color"
+    ],
+    "display": "independent_qt_grid_2x2",
+    "viewer_layout": [
+      [
+        "raw_rgb",
+        "raw_lidar_3d"
+      ],
+      [
+        "full_frame_aligned_lidar",
+        "full_frame_semantic_color"
+      ]
+    ],
+    "image_transport_qos": "reliable_keep_last_1",
+    "pointcloud_view_backend": "native_opengl_window",
+    "viewer_refresh_max_hz": 20,
+    "display_max_width": 960,
+    "aligned_image_topic": "/perception/lidar_aligned"
+  },
+  "alignment": {
+    "enabled": false,
+    "mode": "full_camera_fov",
+    "camera_depth_range_m": [
+      0.05,
+      120.0
+    ],
+    "margin_pixels": 2,
+    "apply_to": [
+      "rgb",
+      "semantic_labels",
+      "semantic_color",
+      "lidar_encoding",
+      "aligned_pointcloud_image"
+    ],
+    "crop_model_input": false,
+    "coordinate_frame": "camera_optical_frame",
+    "note": "No image ROI crop. Raw cloud viewer reads the original forward 120-degree EM4-T approximate scan. Projection uses full original CameraInfo and TF; no synthetic points fill unmatched image regions."
+  },
+  "network_number_of_classes": 25,
+  "taxonomy": "factory_inspection_11",
+  "class_mapping_path": "src/perception/config/class_mapping.json",
+  "ground_prior": {
+    "enabled": true,
+    "mode": "near_ground_lidar_blind_region",
+    "ground_label_id": 0,
+    "ground_plane_z_base_m": 0.0,
+    "max_ground_radius_m": 2.0,
+    "preserve_measured_points": true,
+    "observation_margin_pixels": 3,
+    "assumption": "Flat ground in base_link; an explicit prior, not a sensor observation or learned recognition.",
+    "apply_to": "visualization_only"
+  },
+  "evaluation": {
+    "mask": "camera_lidar_geometric_ground_coverage_intersect_front_roi",
+    "region_source": "src/factory_sim/config/sensors.json:detection_region",
+    "exclude_physical_blind_region": true,
+    "require_actual_point_return": false,
+    "labels_source": "/perception/labels",
+    "ground_prior_not_in_labels": true
+  },
+  "pointcloud_projection": {
+    "deployment": "docker_cuda",
+    "endpoint": "/infer_points",
+    "transport": "length_prefixed_json_and_binary_arrays",
+    "device": "cuda",
+    "input": "synchronized_rgb_xyz_intrinsics_and_time_specific_tf",
+    "depth_collision": "nearest_depth_amin",
+    "cpu_fallback": false
+  }
+}

@@ -3,3 +3,5 @@ __pycache__/
 *.pyc
 models/*/*.pth
 outputs/
+data/*
+!data/README.md

@@ -1,5 +1,0 @@
-FROM ubuntu24.04_py312_torch271_cu126:latest
-WORKDIR /opt/stitchfusion
-COPY src/stitchfusion_reference/ /opt/stitchfusion/
-ENV PYTHONPATH=/opt/stitchfusion:/opt/model-libs PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NVIDIA_DRIVER_CAPABILITIES=compute,utility
-CMD ["python3", "-c", "import torch; print('StitchFusion inference environment:', torch.__version__)"]

@@ -1,0 +1,15 @@
+FROM ubuntu24.04_py312_torch271_cu126:latest
+# Inference-only adaptation of pinned upstream sources. No network or model test at build time.
+WORKDIR /app
+COPY src/perception/ /app/src/perception/
+COPY src/third_party/cmnext/ /app/src/third_party/cmnext/
+ENV PYTHONPATH=/app/src:/app/src/third_party/cmnext:/opt/model-libs \
+    PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 \
+    HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 \
+    OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 \
+    NVIDIA_DRIVER_CAPABILITIES=compute,utility \
+    PYTORCH_KERNEL_CACHE_PATH=/tmp/cmnext-kernel-cache
+RUN mkdir -p /tmp/cmnext-kernel-cache && chmod 1777 /tmp/cmnext-kernel-cache
+EXPOSE 8765
+ENTRYPOINT []
+CMD ["python3", "-m", "perception.services.server"]
